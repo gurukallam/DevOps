@@ -1,4 +1,4 @@
 ---
-- name: Apply package updates
+- name: Create a snapshot if 'VMware Virtual Platform'.  
   include_tasks: "create_snapshot.yml"
 
