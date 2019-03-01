@@ -1,0 +1,35 @@
+---
+- name: Subscribing the RHEL 7 server to Satellite 6.2.
+  redhat_subscription:
+    activationkey: vdc_activation_key_rhel7.x
+    org_id: Guitar_Center_Inc_
+    force_register: yes
+    state: present
+    pool: '^(Red Hat Enterprise Server|Red Hat Virtualization)$'
+
+#- name: Subscribing the RHEL 7 server to Satellite 6.2. 
+#  command: /usr/bin/subscription-manager --force register --activationkey="vdc_activation_key_rhel7.x" --org="Guitar_Center_Inc_"
+#  args: 
+#    chdir: /usr/bin/
+
+- name: Enable all the following required repositories the RHEL 7 server. 
+  command: /usr/bin/subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-rhn-tools-rpms --enable=rhel-7-server-rh-common-rpms --enable=rhel-7-server-satellite-tools-6.2-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-optional-rpms
+  args: 
+    chdir: /usr/bin/
+
+- name: Install katello-agent for errata information syncing with the Satellite.
+  yum:
+    name: katello-agent
+    state: latest
+
+- name: Upload errata information syncing with the Satellite.
+  shell: katello-package-upload
+
+#- name: Log completion of rhel-7-sat-config.yml to ansible_install.log
+#  lineinfile:
+#    path: /var/log/ansible_install.log
+#    state: present
+#    create: yes
+#    insertafter: EOF
+#    line: "rhel-7-sat-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+...

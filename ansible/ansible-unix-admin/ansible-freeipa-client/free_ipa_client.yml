@@ -1,0 +1,34 @@
+---
+- name: Install FreeIPA client on remote hosts.
+  hosts: "{{ override_hosts | default('all') }}"
+  become_user: root
+  become_method: sudo
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars:
+# Primary DNS domain of the IPA deployment
+# Type: Str
+    freeipa_client_domain: idm.gcyard.com
+# The hostname of this machine (FQDN)
+# Type: Str
+    freeipa_client_fqdn: "{{ ansible_fqdn }}"
+# Password to join the IPA realm
+# Type: Str
+    freeipa_client_password: Hokett2105#
+# Principal to use to join the IPA realm
+# Type: Str
+    freeipa_client_principal: admin
+# Kerberos realm name of the IPA deployment
+# Type: Str
+    freeipa_client_realm: IDM.GCYARD.COM
+# FQDN of IPA server
+# Type: Str
+    freeipa_client_server: gap-idm-001-ld.idm.gcyard.com
+
+  roles:
+    - freeipa_client
+...

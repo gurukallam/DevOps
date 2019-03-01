@@ -1,0 +1,18 @@
+---
+services:
+  Common:
+    postfix: ['yes','reloaded']
+
+  RedHat:
+    sshd: ['yes','restarted']
+    auditd: ['yes','started']
+    rsyslog: ['yes','started']
+    snmpd: ['yes','started']
+    ntpd: ['yes','started']
+
+  RedHat6:
+    iptables: ['no','started']
+
+  RedHat7:
+    rpcbind: ['yes','started']
+    firewalld: ['yes','started']

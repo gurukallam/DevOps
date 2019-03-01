@@ -1,0 +1,20 @@
+---
+#- name: Update grub2-common
+#  yum: 
+#    name: grub2-common
+#    state: latest
+#  ignore_errors: true
+#
+#- name: Install fwupdate-efi
+#  yum: 
+#    name: fwupdate-efi
+#    state: present
+#  ignore_errors: true
+#
+- name: Install the gui package
+  yum: 
+    name: "@^Server with GUI" 
+    state: present
+#  command: yum -y groupinstall "Server with GUI"
+  become: true
+... 

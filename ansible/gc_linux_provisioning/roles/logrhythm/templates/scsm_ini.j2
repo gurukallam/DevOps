@@ -1,0 +1,117 @@
+[General]
+SystemMonitorName={{ ansible_fqdn }}
+LogLevel=2
+HeartbeatInterval=6
+Compress=0
+FailbackDelay=60
+LoadBalanceDelay=4320
+CompressBatch=50
+ProcessPriority=2
+MaxServiceMemory=2048
+CycleTime=10
+EventLogBuffer=8
+EventLogTimeout=10
+EventLogCacheLifetime=30
+MaxSuspenseFileSize=5
+VirtualSourceDNSResolution=True
+MaxLogQueueMemory=256
+ConnectionTimeout=7200
+LocalLogLifetime=7
+FlushBatch=1000
+SocketSendTimeout=60000
+SocketReceiveTimeout=60000
+LogSourceSearchScope=1
+TCPNodeDelay=True
+TCPSendBufferSize=524288
+TCPRecvBufferSize=524288
+TCPReuse=True
+EntityID=2
+IsLoadBalanced=False
+LogSourceVirtualizationThreadCount=5
+LogSourceVirtualizationTimeoutMillSec=100
+
+[TLSCertificates]
+UseAgentTLSCert=False
+EnforceMediatorTLSCertTrust=False
+EnforceMediatorTLSCertRevocation=False
+MediatorTLSCertOCSPURL=
+AgentTLSCertLocation=0
+AgentTLSCertStore=0
+AgentTLSCertSubject=
+AgentTLSCertFile=
+AgentTLSSecretKeyFilename=
+AgentTLSSecretKeyPassword=
+
+[Mediator 1]
+ClientAddress={{ ansible_default_ipv4.address }}
+Host=10.192.244.249
+ServerPort=443
+ClientPort=3333
+
+[Mediator 2]
+ClientAddress={{ ansible_default_ipv4.address }}
+Host=10.192.244.250
+ServerPort=443
+ClientPort=3333
+
+[FileIntegrityMonitor]
+FileMonitor=True
+FIMIncludeUAMData=False
+RealtimeFileMonitor=False
+RealtimeIDMPollingInterval=5
+
+[FimPolicies]
+Policy1000000009=GC - Linux Minimal
+
+[GC - Linux Minimal]
+FileMonPolicy=Daily - 4096kb - 5 deep Start=01:00:00 Stop=02:00:00 Interval=1440 MaxSize=4096 MaxDepth=5 MFlags=RM
+Directory=/etc Policy=Daily - 4096kb - 5 deep Inclusions=*.* Exclusions=
+Directory=/var/log Policy=Daily - 4096kb - 5 deep Inclusions=*.* Exclusions=
+
+[NetworkConnectionMonitor]
+NetworkConnectionMonitor=False
+NetworkConnectionMonitorInterval=5
+NetworkConnectionMonitorIncludeUAMData=False
+LogListeners=False
+LogEstablishedInboundConnections=False
+LogEstablishedOutboundConnections=False
+
+[ProcessMonitor]
+ProcessMonitor=False
+ProcessMonitorInterval=5
+ProcessMonitorIncludeUAMData=False
+
+[UAM]
+LogonUserActivityMonitor=True
+ProcessUserActivityMonitor=False
+NetworkSessionUserActivityMonitor=False
+UserActivityMonitorInterval=5
+UserActivityMonitorHistory=24
+
+[SecureSyslogServer]
+SecureSyslogPort=6514
+UseSecureSyslogServerCert=False
+SecureSyslogServerCertStore=0
+SecureSyslogServerCertSubject=
+SecureSyslogServerCertLocation=0
+RequireSecureSyslogClientCert=False
+EnforceSecureSyslogClientCertTrust=False
+EnforceSecureSyslogClientCertRevocation=False
+SecureSyslogClientCertOCSPURL=
+
+[SyslogServer]
+SyslogServer=False
+SyslogServerNIC=0
+SyslogUDPPort=514
+SyslogTCPPort=514
+SyslogFile=False
+SyslogFilePath=
+SyslogFileRotationSize=5
+SyslogFileHistory=7
+SyslogParsedHosts=
+SyslogParsedHostExpressions=^<(?<priority>\d{1,3})>\s*(?<message>(?<month>[a-zA-Z]{3})\s*(?<day>\d{1,2})\s*(?<hour>\d{1,2}):(?<minute>\d{1,2}):(?<seconds>\d{1,2})\s*Message forwarded from (?<hostidentifier>\S+):.*)
+^<(?<priority>\d{1,3})>\s*(?<message>(?<month>[a-zA-Z]{3})\s*(?<day>\d{1,2})\s*(?<hour>\d{1,2}):(?<minute>\d{1,2}):(?<seconds>\d{1,2})\s*(\S+:)\s*.*)
+^<(?<priority>\d{1,3})>\s*(?<message>(?<month>[a-zA-Z]{3})\s*(?<day>\d{1,2})\s*(?<hour>\d{1,2}):(?<minute>\d{1,2}):(?<seconds>\d{1,2})\s*(?<hostidentifier>\S+)\s*.*)
+^<(?<priority>\d{1,3})>\s*(?<message>.*)
+^(?<message>(?<month>[a-zA-Z]{3})\s*(?<day>\d{1,2})\s*(?<hour>\d{1,2}):(?<minute>\d{1,2}):(?<seconds>\d{1,2})\s*(?<hostidentifier>\S+)\s*.*)
+SyslogUseEnhancedTCPDelimiters=False

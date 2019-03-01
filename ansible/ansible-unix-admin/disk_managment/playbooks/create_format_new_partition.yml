@@ -1,0 +1,130 @@
+---
+- name: Create a single partition and allocate all disk space to it.
+  hosts:  "{{ override_hosts | default('all') }}"
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+# PURPOSE: configured mounted extra VMDKs with a given filesystem of a given size based on a server type
+
+# ATTENTION:
+# DiskManagement / FileSystem management is tricky with ansible.
+
+# ASSUMPTION:
+# Disk with the desired size has been attached from the VMWare side.
+# All VMDKs managed by this playbook start off as raw block devices
+
+  vars:
+    extra_disks:
+      - size: '10.00 GB'
+        fstype: 'xfs'
+        mount_point: '/var/tmp/test'
+
+# The same concept can ben used to partition multiple disks for multiple mount_points.
+# For Example,
+      #- size: '25.00 GB'
+      #  fstype: 'ext4'
+      #  mount_point: '/mnt/test2'
+
+  tasks:
+  - name: Display extra-disks
+    extra_disks_sd_mapper:
+      field: 'mount_point'
+      order: 'alphanumeric'
+      edisks: '{{ extra_disks }}'
+      devices: "{{ ansible_devices }}"
+      mounts: "{{ ansible_mounts }}"
+    register: extras
+
+  - name: set_fact new_extra_disks
+    set_fact: new_extra_disks={{ extras['meta']['map'] }}
+    changed_when: false
+
+  # aniteshl
+  - name: display new_extra_disks
+    debug: var=new_extra_disks
+
+  - name: verify that all extra disks are the expected size
+    fail:
+      msg: "ERROR expected /dev/{{ item.dev }} {{ item.size }} != {{ hostvars[inventory_hostname]['ansible_devices'][item.dev].size }}"
+    when: "{{ item.size | quote }} != {{ hostvars[inventory_hostname]['ansible_devices'][item.dev].size | quote }}"
+    with_items: '{{ new_extra_disks }}'
+
+  - name: get primary partition stat info
+    stat:
+      path: '/dev/{{item.dev}}1'
+    with_items: '{{ new_extra_disks }}'
+    become: true
+    register: device_stat
+
+    # aniteshl: this needs to be tested as msdos has been changed to gpt
+  - name: create partition table
+    command: '/sbin/parted -s /dev/{{ item.item.dev }} mklabel gpt mkpart primary {{ item.item.fstype }} 0% 100%'
+    with_items: '{{ device_stat.results }}'
+    become: true
+    when:
+      - not item | skipped
+      - item.stat.exists == false
+
+  - name: get partition filesystem type info
+    shell: "blkid -s TYPE -o value /dev/{{item.dev}}1"
+    ignore_errors: true
+    with_items: '{{ new_extra_disks }}'
+    become: true
+    changed_when: false
+    register: fstype_info
+
+  - name: create a filesystem on extra disks
+    filesystem:
+      fstype: '{{ item.item.fstype }}'
+      dev: '/dev/{{ item.item.dev }}1'
+    with_items: '{{ fstype_info.results }}'
+    become: true
+    when:
+      - not item | skipped
+      - item.stdout != '{{ item.item.fstype }}'
+    # aniteshl: needs to be tested
+
+  - name: create mount point directories for extra-disks
+    file:
+      path: '{{ item.mount_point }}'
+      state: directory
+      recurse: yes
+      owner: root
+      group: root
+      mode: 0775
+    with_items: '{{ new_extra_disks }}'
+    become: true
+
+  - name: get partition filesystem UUID info
+    shell: 'blkid -s UUID -o value /dev/{{item.dev}}1'
+    ignore_errors: true
+    with_items: '{{ new_extra_disks }}'
+    become: true
+    changed_when: false
+    register: fsuuid_info
+
+  - name: create mounts for extra-disks
+    mount:
+      name: '{{ item.item.mount_point }}'
+      src: 'UUID={{ item.stdout }}'
+      fstype: '{{ item.item.fstype }}'
+      state: mounted
+    with_items: '{{ fsuuid_info.results }}'
+    become: true
+    when:
+      - not item | skipped
+      - item.stdout is defined
+
+  - name: update mount point directories permissions for extra-disks
+    file:
+      path: '{{ item.mount_point }}'
+      state: directory
+      recurse: yes
+      owner: root
+      group: root
+      mode: 0775
+    with_items: '{{ new_extra_disks }}'
+    become: true
+...

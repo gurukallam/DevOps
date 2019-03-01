@@ -1,0 +1,747 @@
+# This file is managed by Ansible.  Please refrain from direct edits as they may be overwritten
+#
+# VShell for UNIX vshelld_config
+# This is the vshelld server system-wide configuration file.  See
+# vshelld_config(5) for more information.
+
+# The vshelld_config shipped with VShell is to specify options
+# with their default value, but leave them commented where
+# possible.  ConnectionFilterTableV2 and PortForwardFilterTableV2 are
+# two exceptions to this.  The default if these two values are
+# not present is not a usable configuration, so these two entries
+# have been added to allow all connections and all port forwards.
+# You'll probably want to adjust these to be a little more restrictive.
+# Uncomment options to change a default value.
+
+# Provides ability to allow or deny specific users or groups access to server
+# functions.
+#
+#AccessControl {
+#       Login { AllowUsers{*} },
+#       Shell { AllowUsers{*} },
+#       RemoteExecution { AllowUsers{*} },
+#       Sftp { AllowUsers{*} },
+#       Scp { AllowUsers{*} },
+#       Ftps { AllowUsers{*} },
+#       PortForwarding { AllowUsers{*} },
+#       RemotePortForwarding { DenyUsers{*} }
+#}
+
+#------------------------------------------------------------------------------#
+# GaaC - Guitar Center
+#
+# # This file is managed by Ansible.  Please refrain from direct edits as they may be overwritten
+
+AccessControl {
+        Login {
+         AllowUsers{ sftpsvc }
+         AllowGroups{ usa,usa1,eis,profit,prokarma,engie,engieuser2,evention,evention_user1,evention_user2,torichrel,richreluser2,msc,msctest,srs,gccom,mfit,wellpoint,wellpoint_dev,servchannel,unixeitest,dbasftp,ADP_EV5_HR,wfcc,cass,mrkentsftp,rgis,torgis,posbchmon,rgissftp,svc_sp_gis-dev,tohubgis,tomistrclp,fmmistrclp,unixietest,toadp,tomister,frmmister,adpfiles,adpfiles_dev,adpfiles_prod,frmcommhub,eai_prod,eai_qa,adphr,qrprod,quantdata,totoolsgrp,frmtoolsgrp,frmprinceton,frmvalid,tovalid,healadvsftp,frmbronco,frmbronto,frm360pi,toimpactgrp,frmimpactgrp,googlemkt,synchrony,yext,aimdata,presagiasftp,gcstudiofiles_dev,gcstudiofiles_prod,jbsolsftp,whitepages,acquisitionsftp,so99,validfiles,svc-testuser,svc-testuser,usa_sftpusr }
+         DenyUsers{ root }
+         DenyGroups{ wheel }
+        }
+
+        Shell {
+         AllowUsers{ sftpsvc }
+         AllowGroups{ usa,usa1,eis }
+         DenyUsers{ root }
+         DenyGroups{ wheel }
+        }
+
+        SFTP {
+         AllowUsers{ sftpsvc }
+         AllowGroups{ usa,usa1,eis,profit,prokarma,engie,engieuser2,torichrel,richreluser2,evention,evention_user1,evention_user2,msc,msctest,srs,gccom,mfit,wellpoint,wellpoint_dev,servchannel,unixeitest,dbasftp,wfcc,cass,mrkentsftp,rgis,torgis,posbchmon,rgissftp,svc_sp_gis-dev,tohubgis,tomistrclp,fmmistrclp,unixietest,toadp,tomister,frmmister,adpfiles,adpfiles_dev,adpfiles_prod,frmcommhub,eai_prod,eai_qa,adphr,qrprod,quantdata,totoolsgrp,frmtoolsgrp,frmprinceton,frmvalid,tovalid,healadvsftp,frmbronco,frmbronto,frm360pi,toimpactgrp,frmimpactgrp,googlemkt,synchrony,yext,aimdata,presagiasftp,gcstudiofiles_dev,gcstudiofiles_prod,jbsolsftp,whitepages,acquisitionsftp,so99,validfiles,svc-testuser,svc-testuser,usa_sftpusr }
+         DenyUsers{ root }
+         DenyGroups{ wheel }
+        }
+
+        SCP {
+         AllowUsers{ sftpsvc }
+         AllowGroups{ usa,usa1,eis,profit,prokarma,engie,engieuser2,torichrel,richreluser2,evention,evention_user1,evention_user2,msc,msctest,srs,gccom,mfit,wellpoint,wellpoint_dev,servchannel,unixeitest,dbasftp,wfcc,cass,mrkentsftp,rgis,torgis,posbchmon,rgissftp,svc_sp_gis-dev,tohubgis,tomistrclp,fmmistrclp,unixietest,toadp,tomister,frmmister,adpfiles,adpfiles_dev,adpfiles_prod,frmcommhub,eai_prod,eai_qa,adphr,qrprod,quantdata,totoolsgrp,frmtoolsgrp,frmprinceton,frmvalid,tovalid,healadvsftp,frmbronco,frmbronto,frm360pi,toimpactgrp,frmimpactgrp,googlemkt,synchrony,yext,aimdata,presagiasftp,gcstudiofiles_dev,gcstudiofiles_prod,jbsolsftp,whitepages,acquisitionsftp,so99,validfiles,svc-testuser,svc-testuser,usa_sftpusr }
+         DenyUsers{ root }
+         DenyGroups{ wheel }
+        }
+
+        PortForwarding { } # Deny all
+
+        RemotePortForwarding { } # Deny all
+
+        RemoteExecution {
+         AllowGroups{ usa,usa1,sftpsvc }
+        }
+}
+
+
+# Enter a path to authentication banner file.
+#
+#AuthenticationBannerPath /etc/banner_file
+AuthenticationBannerPath /etc/issue
+
+# Enter number of seconds for vshelld to wait before authentication times out.
+#
+#AuthenticationTimeout 600
+
+# If this setting is not defined the following methods are allowed:
+# publickey, password, gssapi-with-mic and gssapi-keyex.  To allow
+# keyboard-interactive or other methods, they must be listed explicitly.
+#
+#AuthenticationsAllowed {  }
+AuthenticationsAllowed { publickey, password }
+
+# Methods that are required to authenticate. All items listed in the required
+# list should also appear in the allowed list.
+#
+#AuthenticationsRequired {  }
+
+# Generates a new host key.
+#
+#AutoGenerateHostKey true
+
+# Automatically creates the directory for a virtual root if $USER is in the
+# root's path.
+#
+#AutoCreateUserVirtualRootPath false
+
+# Set the maximum data transfer rate, in KB/s, per session.
+# Defaults to 0, which means unlimited.
+#
+#BandwidthLimit 0
+
+# Restricts user's shell, and remote execution to their home directory.
+#
+#ChrootUsers { }
+
+# Restricts members of listed groups to their home directory.
+#
+#ChrootGroups { }
+ChrootGroups { mfit }
+
+# Default values supported by vshelld.
+#
+#Ciphers { aes256-ctr,aes192-ctr,aes128-ctr,
+#          aes256-cbc,aes192-cbc,aes128-cbc,
+#          twofish-cbc,blowfish-cbc,3des-cbc,
+#          arcfour }
+
+# Sets the server compression level for data sent from the client.
+#
+#CompressionLevel 5
+
+# Default values supplied by vshelld.
+#
+#Compressions { none,zlib }
+
+# Configures filters that allow or deny connections from specific IP
+# addresses, hosts, networks and domains.
+#
+ConnectionFilterTableV2 {
+    { netmask 0.0.0.0/0.0.0.0, access allow, comment "allow everyone access" }
+}
+
+# Sets the default umask on all uploaded files.  This setting can be overridden
+# on a per user basis through the use of a .vshellrc file (See vshelld man page).
+#
+#DefaultUmask 0077
+DefaultUmask 0007
+
+# Enables umask discovery via launching of a non-interactive login shell
+#
+#EnableUmaskDiscovery true
+
+# Enables automatically adding client IP addresses to the specified
+# deny hosts file after the specified number of authentication
+# failures. Connections originating from the IP addresses listed in
+# the file will be denied.
+#
+#DenyHostAfterFailure false
+#DenyHostsFile /path/to/denyhosts
+#DenyHostAfterFailureCount 50
+
+# Denies root access
+#
+#DenyRoot false
+DenyRoot true
+
+# Users with blank passwords cannot authenticate
+#
+#DisallowBlankPasswords true
+
+# Enables key re-exchange for clients that do not support key re-exchange.
+#
+#EnableKeyRe-ExchangeCompatibility true
+
+# If this option is true vshelld decodes user's password as UTF8.
+#
+#EncodeAuthDataAsUTF8 true
+
+# Enter a list of environment variables that can be changed through the SSH
+# protocol.
+#
+#EnvironmentVariableFilter { VDS_* }
+
+# Enter a list of filenames for your host key files, only one key for each
+# algorithm is allowed.
+#
+#HostKeyFilenames { /usr/local/etc/vshelld_hostkey }
+
+# Idle timeout is disabled by default.
+#
+#IdleTimeout 0
+
+# Idle timeout is disabled by default.
+#
+#IdleNOOPTimeout 0
+
+# Enables TCP/IP feature allowing system software to detect when other party
+# becomes unreachable.
+#
+#KeepAlive true
+
+# Default values supported by vshelld.
+#
+#KeyExchangeMethods { ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,
+#                     diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,
+#                     diffie-hellman-group-exchange-sha1  }
+
+# Specifies the amount of data passed before key re-exchange occurs.
+#
+#KeyRe-ExchangeMB 1024
+
+# Enter the amount of time between key exchange operations.
+#
+#KeyRe-ExchangeTimeout 30m
+
+# Enter a license file path if it is not in the default location.
+#
+#LicenseFilePath
+
+# Controls which NIC vshelld listens on to better lock down access to the
+# server.
+#
+#ListenAddresses { 0.0.0.0:22 }
+
+# Specifies a directory where vshelld will store log files.
+#
+#LogFolder
+LogFolder /var/log/VShellLogs
+
+# Specifies whether vshelld uses W3C format for log files.
+#
+#UseW3CLogging true
+
+# Logs authentication messages to the vshelld log file.
+#
+#LogTopicAuthentication true
+
+# Logs connection messages to the vshelld log file.
+#
+#LogTopicConnection true
+
+# Logs debug messages to the vshelld log file.
+#
+#LogTopicDebug false
+
+# Logs error messages to the vshelld log file.
+#
+#LogTopicError true
+
+# Logs forwarding messages to the vshelld log file.
+#
+#LogTopicForward true
+
+# Logs information messages to the vshelld log file.
+#
+#LogTopicInfo true
+
+# Logs SFTP messages to the vshelld log file.
+#
+#LogTopicSFTP true
+
+# Logs warning messages to the vshelld log file.
+#
+#LogTopicWarning true
+
+# Default values supported by vshelld.
+#
+#MACs { hmac-sha2-512,hmac-sha2-256,hmac-sha1,hmac-sha1-96,
+#       hmac-md5,hmac-md5-96,umac-64@openssh.com }
+
+# Specifies the number of times that a client can attempt to send
+# valid credentials before vshelld disconnects the client.
+#
+#MaximumAuthenticationRetries 5
+MaximumAuthenticationRetries 3
+
+# Enter location of the message of the day file.
+#
+#MOTDPath /etc/motd
+
+# Enter filename for the vshelld.pid file.
+#
+#PidFilename /var/run/vshelld.pid
+
+# Configures filters that allow or deny port forwarding requests to specific
+# IP addresses, hosts, networks, or domains.
+#
+PortForwardFilterTableV2 {
+    { netmask 0.0.0.0/0.0.0.0, access allow, port 0, comment "allow all hosts/ports" }
+}
+
+# Enter the  folder in which you want to store the public key file.
+#
+#PublicKeyFolder $HOME/.vshell/publickey
+PublicKeyFolder $HOME/.ssh
+
+# Level of permission checking vshelld should perform on the user's publickey
+# folder.  Values: VeryStrict, Strict, None
+#
+#PublickeyPathPermissionChecking Strict
+
+# Reject public keys that may be vulnerable to US-CERT Vulnerability Note
+# VU#845620. See http://www.kb.cert.org/vuls/id/845620 for more information.
+#
+#RejectRSAPublicKeysWithExponent3 true
+
+# Restricts SFTP access to the users' home directories.
+#
+#RestrictSFTPtoHome false
+
+# When set to false, vshelld sends "SSH-2.0-0.0" as the version string.
+#
+#RevealVersionInfo true
+
+# Enables sending "Connection limit exceeded" disconnect errors to the client.
+#
+#SendDisconnectErrorsToClient false
+SendDisconnectErrorsToClient true
+
+# Provides ability to allow or deny specific users or groups sftp access to
+# specific directories.
+#
+#SftpVirtualDirectories {
+#    Unrestricted { AllowUsers{*} }
+#}
+
+#------------------------------------------------------------------------------#
+# GC - Guitar Center
+
+SftpVirtualDirectories {
+        Unrestricted {
+         AllowGroups{ usa }
+        }
+        Alias "home"{
+         Directory "$HOME"
+         AllowUsers{ * }
+         DenyUsers{ unixei,svc_sp_gis-dev }
+         DenyGroups{ mfit }
+        }
+        Alias "profit"{
+         Directory "/data/ei/profit"
+         AllowUsers{ sftpsvc,PROFIT }
+        }
+        Alias "prokarma"{
+         Directory "/data/ei/prokarma"
+         AllowUsers{ sftpsvc,PROKARMA }
+        }
+        Alias "msc"{
+         Directory "/data/ei/msc"
+         AllowUsers{ sftpsvc,mscsftp }
+        }
+        Alias "msctest"{
+         Directory "/data/ei/msctest"
+         AllowUsers{ sftpsvc,msctstsftp }
+        }
+        Alias "srs"{
+         Directory "/data/ei/srs"
+         AllowUsers{ sftpsvc,srssftp }
+        }
+         Alias "gccom"{
+         Directory "/data/ei/gccom"
+         AllowUsers{ sftpsvc,gccom1 }
+        }
+        Alias "mfit"{
+         Directory "/softw/mfit"
+         AllowUsers{ mfitops,mfitguest }
+        }
+        Alias "wellpoint"{
+         Directory "/data/ei/wellpoint"
+         AllowUsers{ sftpsvc,sftpwp }
+        }
+        Alias "wellpoint_dev"{
+         Directory "/data/ei/wellpoint_dev"
+         AllowUsers{ sftpsvc,sftpwpts }
+        }
+        Alias "servchannel"{
+         Directory "/data/ei/servchannel"
+         AllowUsers{ sftpsvc,schannel1 }
+        }
+        Alias "unixeitest"{
+         Directory "/data/ei/unixeitest"
+         AllowUsers{ sftpsvc,unixei }
+        }
+        Alias "dbasftp"{
+         Directory "/data/ee/dbasftp"
+         AllowUsers{ sftpsvc,dbasftp }
+        }
+        Alias "wfcc"{
+         Directory "/data/ei/wfcc"
+         AllowUsers{ sftpsvc,wfccsvc }
+        }
+        Alias "cass"{
+         Directory "/data/ei/cass"
+         AllowUsers{ sftpsvc,casssftp }
+        }
+        Alias "rgis"{
+         Directory "/data/ei/rgis"
+         AllowUsers{ sftpsvc,rgissftp }
+        }
+        Alias "torgis"{
+         Directory "/data/ie/torgis"
+         AllowUsers{ sftpsvc,rgissftp }
+        }
+        Alias "tohubgis"{
+         Directory "/data/ie/tohubgis"
+         AllowUsers{ sftpsvc,svc_sp_gis-dev }
+        }
+        Alias "tomistrclp"{
+         Directory "/data/ie/tomistrclp"
+         AllowUsers{ sftpsvc,mistrclpsftp }
+        }
+        Alias "fmmistrclp"{
+         Directory "/data/ei/fmmistrclp"
+         AllowUsers{ sftpsvc,mistrclpsftp }
+        }
+        Alias "unixietest"{
+         Directory "/data/ie/unixietest"
+         AllowUsers{ sftpsvc,unixei }
+        }
+        Alias "adpfiles_dev"{
+         Directory "/data/ei/adpfiles_dev"
+         AllowUsers{ sftpsvc,adpuser }
+        }
+        Alias "gcstudiofiles_dev"{
+         Directory "/data/ei/gcstudiofiles_dev"
+         AllowUsers{ sftpsvc,adpuser }
+        }
+        Alias "adpfiles_prod"{
+         Directory "/data/ei/adpfiles_prod"
+         AllowUsers{ sftpsvc,adpuser }
+        }
+        Alias "gcstudiofiles_prod"{
+         Directory "/data/ei/gcstudiofiles_prod"
+         AllowUsers{ sftpsvc,adpuser }
+        }
+        Alias "tomister"{
+         Directory "/data/ie/tomister"
+         AllowUsers{ sftpsvc,mcguitarssftp }
+        }
+        Alias "frmmister"{
+         Directory "/data/ei/frmmister"
+         AllowUsers{ sftpsvc,mcproductssftp }
+        }
+        Alias "frmcommhub"{
+         Directory "/data/ei/frmcommhub"
+         AllowUsers{ sftpsvc,mercent }
+        }
+        Alias "eai_prod"{
+         Directory "/data/ie/eai_prod"
+         AllowUsers{ sftpsvc,svc_ca }
+        }
+        Alias "eai_qa"{
+         Directory "/data/ie/eai_qa"
+         AllowUsers{ sftpsvc,svc_caqa }
+        }
+        Alias "adphr"{
+         Directory "/data/ei/adphr"
+         AllowUsers{ sftpsvc,adpr }
+        }
+        Alias "qrprod"{
+         Directory "/data/ie/qrprod"
+         AllowUsers{ sftpsvc,quantum3 }
+        }
+        Alias "quantdata"{
+         Directory "/data/ei/quantdata"
+         AllowUsers{ sftpsvc,quantum3 }
+        }
+        Alias "totoolsgrp"{
+         Directory "/data/ie/totoolsgrp"
+         AllowUsers{ sftpsvc,frmtlsgrp }
+        }
+        Alias "frmtoolsgrp"{
+         Directory "/data/ei/frmtoolsgrp"
+         AllowUsers{ sftpsvc,frmtlsgrp }
+        }
+        Alias "frmprinceton"{
+         Directory "/data/ei/frmprinceton"
+         AllowUsers{ sftpsvc,princeton }
+        }
+        Alias "frmvalid"{
+         Directory "/data/ei/frmvalid"
+         AllowUsers{ sftpsvc,valid }
+        }
+        Alias "tovalid"{
+         Directory "/data/ie/tovalid"
+         AllowUsers{ sftpsvc,valid }
+        }
+        Alias "healadvsftp"{
+         Directory "/data/ei/healadvsftp"
+         AllowUsers{ sftpsvc,healadvsftpeusr }
+        }
+        Alias "frmbronco"{
+         Directory "/data/ei/frmbronco"
+         AllowUsers{ sftpsvc,bronco }
+        }
+        Alias "frmbronto"{
+         Directory "/data/ei/frmbronto"
+         AllowUsers{ sftpsvc,bronto }
+        }
+        Alias "frm360pi"{
+         Directory "/data/ei/frm360pi"
+         AllowUsers{ sftpsvc,user360pi }
+        }
+        Alias "toimpactgrp"{
+         Directory "/data/ie/toimpactgrp"
+         AllowUsers{ sftpsvc,impactuser }
+        }
+        Alias "frmimpactgrp"{
+         Directory "/data/ei/frmimpactgrp"
+         AllowUsers{ sftpsvc,impactuser }
+        }
+        Alias "googlemkt"{
+         Directory "/data/ei/googlemkt"
+         AllowUsers{ sftpsvc,googleuser }
+        }
+        Alias "synchrony"{
+         Directory "/data/ei/synchrony"
+         AllowUsers{ sftpsvc,syncuser }
+        }
+        Alias "yext"{
+         Directory "/data/ie/yext"
+         AllowUsers{ sftpsvc,yextuser }
+        }
+        Alias "aimdata"{
+         Directory "/data/ei/aimdata"
+         AllowUsers{ sftpsvc,aimuser }
+        }
+        Alias "presagiasftp"{
+         Directory "/data/ei/presagiasftp"
+         AllowUsers{ sftpsvc,presagiasftpeusr }
+        }
+        Alias "jbsolsftp"{
+         Directory "/data/ei/jbsolsftp"
+         AllowUsers{ sftpsvc,jbsoleusr }
+        }
+        Alias "whitepages"{
+         Directory "/data/ie/whitepages"
+         AllowUsers{ sftpsvc,wpage }
+        }
+        Alias "acquisition"{
+         Directory "/data/ei/acquisitionsftp"
+         AllowUsers{ sftpsvc,acquisitionusr }
+        }
+        Alias "engieuser"{
+         Directory "/data/ie/engieuser"
+         AllowUsers{ sftpsvc,engieuser2 }
+        }
+        Alias "engie"{
+         Directory "/data/ei/engie"
+         AllowUsers{ sftpsvc,engieuser2 }
+        }
+        Alias "richrel"{
+         Directory "/data/ei/richrel"
+         Allowusers { sftpsvc,richreluser2 }
+        }
+        Alias "torichrel"{
+         Directory "/data/ie/torichrel"
+         Allowusers { sftpsvc,richreluser2 }
+        }
+        Alias "evention"{
+         Directory "/data/ei/evention"
+         Allowusers { sftpsvc,evention_user2 }
+        }
+        Alias "toevention"{
+         Directory "/data/ie/toevention"
+         Allowusers { sftpsvc,evention_user1,evention_user2 }
+        }
+        Alias "so99"{
+         Directory "/data/ei/so99"
+         Allowusers { sftpsvc,so99user }
+        }
+        Alias "validfiles"{
+         Directory "/data/ei/validfiles"
+         Allowusers { sftpsvc,validuser }
+        }
+        Alias "usa_sftpusr"{
+         Directory "/data/ei/usa_sftp"
+         Allowusers { sftpsvc,usa_sftpusr }
+        }
+# BEGIN ANSIBLE MANAGED BLOCK
+ Alias "svc_testuser"{
+  Directory "/data/ie/svc-testuser}"
+  Allowusers { sftpsvc,svc-testuser }
+ }
+# END ANSIBLE MANAGED BLOCK
+}
+
+# Specify subconfiguration files to be loaded for connections from a location
+#
+#SubconfigurationNetworkMap {}
+
+# Specify subconfiguration files to be loaded for users or groups
+#
+#SubconfigurationUserMap {}
+
+# Configures an external subsystem (e.g., file transfer daemon).
+#
+#SubSystemList {{}}
+
+# Hostname/IP and optional port of the syslog/syslog-ng server: <server>[:<port>]
+#
+#SyslogServer
+
+# Socket type (udp or tcp) of the syslog/syslog-ng server.
+#
+#SyslogSetting udp
+
+# Enter the facility to be used when logging messages to syslogd(8).
+#
+#SyslogFacility LOG_DAEMON
+SyslogFacility LOG_LOCAL3
+
+# Enter the full pathname of the xauth program.
+#
+#XAuthLocation /usr/X11R6/bin/xauth
+
+# Specifies whether X11 forwarding is allowed.
+#
+#X11AllowForwarding false
+
+# Specifies the first display number available for vshelld X11 forwarding.
+#
+#X11DisplayOffset 10
+
+# Controls which NIC vshelld listens on for X11 forwarding.
+#
+#X11ListenAddresses { 127.0.0.1 }
+
+
+################################################################################
+# The following two parameters are used to execute a command following a
+# triggered condition.  Commands should be in the following format:
+#    executable [param1] [paramN]
+#
+# Note: Quotation marks should not be used around the entire command
+# (e.g., "executable param1"). Quotes can be used around the individual
+# parts of the command (e.g., "executable" "param1").  The command also
+# needs to be on one line.
+#
+# VShell for UNIX will replace all instances of $<parameter> in the command.
+# See the man page vshelld_config(5) for details.
+# Values: executable <param1> <paramN>
+#         Valid values for replacement parameter:
+#         Parameter   Replacement Value
+#         $C          error code (valid for file/folder operations)
+#         $I          IP address
+#         $O          old path (valid for renames)
+#         $P          path to filename
+#         $R          protocol
+#         $S          Session ID
+#         $T          time
+#         $U          user
+#################################################################################
+
+# Defines the command to be triggered when a file is uploaded.
+#
+#UploadCommand
+UploadCommand "/usr/local/bin/eupload.sh" "$U" "$P" "$D" "$T" "$C" "$I"
+
+# Defines the command to be triggered when a file is downloaded.
+#
+#DownloadCommand
+
+# Defines the command to be triggered when MaximumAuthenticationRetries is
+# exceeded.
+#
+#FailedAuthCommand
+
+# Defines the command to be triggered on a sucessful login
+#
+#LoginCommand
+
+# Defines the command to be triggered on logout/disconnect after a sucessful
+# login
+#
+#LogoutCommand
+
+# Defines the command to be triggered on a file being renamed
+#
+#FileRenameCommand
+
+# Defines the command to be triggered when a file is deleted
+#
+#FileDeleteCommand
+
+# Defines the command to be triggered when a folder is created
+#
+#FolderCreateCommand
+
+# Defines the command to be triggered when a folder is renamed
+#
+#FolderRenameCommand
+
+# Defines the command to be triggered when a folder is deleted
+#
+#FolderDeleteCommand
+
+# Defines whether or not to fire file transfer triggers on error.
+#
+#FireFileTriggersOnError true
+
+################################################################################
+# The following parameters are only used by the vshell-ftpsd server.
+################################################################################
+
+################################################################################
+# The FTPS implicit and explicit listen addresses specify which NIC
+# and port combination vshell-ftpsd will accept connections on.
+#
+# The CertificatePath field specifies the path to the SSL validation certificate
+# for that listen address.
+#
+# The RequiredEncryption level specifies the encryption level used for that
+# listen address.
+#
+# RequiredEncryptionLevel values:
+#   0 : Do not require encryption
+#   1 : Require encrypted authentication - The command and data channels can
+#       can be unencrypted after authentication.
+#   2 : Require encrypted connections - The command and data channels must be
+#       encrypted for the life of the connection.
+#
+################################################################################
+
+#FTPSImplicitListenAddressesV2 {{ Address 0.0.0.0:990,
+#                                 CertificatePath /path/to/certificate,
+#                                 RequiredEncryptionLevel 2 }}
+
+#FTPSExplicitListenAddressesV2 {{ Address 0.0.0.0:21,
+#                                 CertificatePath /path/to/certificate,
+#                                 RequiredEncryptionLevel 2 }}
+
+# Enable and specify the range of ports that vshell-ftpsd will use for PASV
+# data connections
+#FTPSEnablePassivePortRange false
+#FTPSPassivePortRangeMinimum
+#FTPSPassivePortRangeMaximum
+
+# Enable and specify an alternate IP address that vshell-ftpsd will use for
+# PASV data connections.
+#FTPSUseAlternatePASVAddress false
+#FTPSAlternatePASVAddress
+
+# Specify an alternate server identification string sent to clients connecting
+# to vshell-ftpsd
+#FTPSIdentVersion
+#FTPSPidFilename /var/run/vshell-ftpsd.pid
+
+# Specify an alternate response to the SYST command
+#FTPSSYSTResponse

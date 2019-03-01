@@ -1,0 +1,5 @@
+---
+- name: restart scsm
+  service: 
+    name: scsm
+    state: restarted

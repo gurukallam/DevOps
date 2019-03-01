@@ -1,0 +1,105 @@
+---
+- name: Include the packages
+  include_vars: "vars/yum_packages.yml"
+
+#- name: Install the packages
+#  yum:
+#    name: "{{ item }}"
+#    state: present
+#  with_items: "{{ yum_packages }}"
+#  ignore_errors: true
+- name: ensure a list of packages installed
+  package: 
+    name: "{{ item }}"
+    state: present
+  with_items: 
+    - compat-libstdc++
+    - elfutils-libelf-devel
+    - gcc-c++
+    - libaio-devel
+    - libstdc++-devel
+    - pdksh
+    - compat-libstdc++-33
+    - gtk2
+    - libXtst
+    - libcap
+    - ksh
+    - compat-libcap1.*
+    - compat-libcap2.*
+    - libcap*
+    - glibc.i686
+    - libXp
+    - binutils.i386
+    - binutils.x86_64
+    - libawt
+    - libawt.so
+    - binutils
+    - compat-db
+    - compat-gcc-34
+    - java
+    - java-*
+    - compat-gcc-34-c++
+    - compat-libstdc++-33
+    - compat-libstdc++-33-*
+    - compat-libstdc++-296
+    - gcc
+    - gcc-c++
+    - glibc
+    - glibc-common
+    - glibc-devel
+    - glibc-headers
+    - libgcc
+    - libXp
+    - libXt
+    - libXtst
+    - libaio
+    - libaio-devel
+    - libgcc
+    - libstdc++
+    - libstdc++-devel
+    - libgomp
+    - make
+    - numactl-devel
+    - sysstat
+    - libaio
+    - libaio.i686
+    - libXp.i686
+    - apr
+    - apr-util
+    - apr-util-ldap
+    - glibc-devel.i686
+    - libX11.i686
+    - libXau.i686
+    - libXi.i686
+    - libXt.i686
+    - libXp.i686
+    - libxcb.i686
+    - libXtst.i686
+  ignore_errors: true
+
+- name: Import Non Default Packages Variables.
+  include_vars: vars/non_default_packages.yml
+
+- name: Copying non default packages to remote host.
+  copy:
+    src: "files/{{ item.name }}"
+    dest: /tmp
+  with_items: "{{ non_default_packages }}"
+
+- name: Installing non default packages on remote host.
+#  yum:
+#    name: "/tmp/{{ item.name }}"
+#    state: present
+  command: /bin/rpm -i "/tmp/{{ item.name }}"
+  args: 
+    chdir: /bin/
+  with_items: "{{ non_default_packages }}"
+  ignore_errors: true
+
+- name: Clean non default packages from remote host.
+  file:
+    path: "/tmp/{{ item.name }}"
+    state: absent
+  with_items: "{{ non_default_packages }}"
+  ignore_errors: true
+...

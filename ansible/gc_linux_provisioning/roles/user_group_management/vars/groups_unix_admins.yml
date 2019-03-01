@@ -1,0 +1,3 @@
+---
+groups_unix_admins:
+  - {name: usa, gid: 600, state: present}

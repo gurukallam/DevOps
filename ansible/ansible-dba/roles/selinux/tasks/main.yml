@@ -1,0 +1,6 @@
+---
+- name: Disable Selinux
+  include_tasks: "disable_selinux.yml"
+
+- name: Reboot Server
+  include_tasks: "reboot_server.yml"

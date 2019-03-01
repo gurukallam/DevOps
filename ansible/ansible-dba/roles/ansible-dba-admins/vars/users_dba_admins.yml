@@ -1,0 +1,9 @@
+---
+users_dba_admins:
+  - {name: achoudhary, uid: 8260, password: $6$NWIKvmU9$eMJ7PKwL4.nRninIXk2.FbMMQgIVNZBIhYRvZKNJ142NuWjCJnFOxt4FwkLwCCFE/IrKlN1x1pBre2/qBNSPB/, group: dba, shell: /bin/bash, comment: 'Atul Choudhary - DBA Manager'}
+  - {name: nwarade, uid: 9068, password: $6$ZOr0sQZN$HLcgGTvo/cv9jTsllA3e7hxbMP9p8j58uHgwwAAWeDlwVJI.o/PhydR6cC49lKpvDKV7J3uuiOWXINeQs66nr0, group: dba, shell: /bin/bash, comment: 'Namrata Warade - DBA Syntel'}
+  - {name: obrown, uid: 9100, password: $6$Gi2on8Mv$.Kyrqpi3IUR/9BLShOjOL.mOjFBZqgVQhz3WDDznybWRCSbg9TRINTQDkE3FlDcq.VUSPpDE5Bn1nVXwzwvh8/, group: dba, shell: /bin/bash, comment: 'Oliver Brown - DBA Syntel'}
+  - {name: smuke, uid: 9126, password: $6$UBGcU7PN$idc9itrSCEWkir08C7wAts7O.FZU4/TDKHZxuvChhk3eib.cNW8kMzupD1RbiA9WkzZJx9lcFSrFi.K5Ot8TY/, group: dba, shell: /bin/bash, comment: 'Sandip Muke - Oracle DBA Syntel'}
+  - {name: sugale, uid: 9000, password: $6$C4Vezl6k$S5jGw/2jQ.EAgq8kfljl5gc7PSUFq3sqJ17dyR/XyNNFfO2QDlrTxU.YoWyJHHvDuV.ssbBHKfLweWZ8hDNZc/, group: dba, shell: /bin/bash, comment: 'ShyamSundar Ugale - DBA syntel'}
+  - {name: oracle, uid: 500, password: $6$YO5fBIn4$G2k28adigT..vHiBKk8sEXamennz0Nn8xBxbBJYgNmiGxmd5vLykxsj5gHSj2narsp/QOGnH1H6ZguMcfIbe8/, group: oinstall, shell: /bin/bash, comment: 'Oracle DBA'}
+  - {name: grid, uid: 501, password: $6$/0LzB4/J$7bBtKClqQh36voezkQ5vOZmXG.nMyrb2QIEELwsN8Q5tA8GsOmbxPp/4HxObzklhOAP7ME2ycfO1zl21jhJtP1, group: oinstall, groups: dba, shell: /bin/bash, comment: 'Grid Service Account'}

@@ -1,0 +1,32 @@
+---
+- name: Update sshd_config to allow environment variables. 
+#  hosts: 127.0.0.1
+#  connection: local
+  hosts: "{{ override_hosts | default('OMS_SERVERS') }}"
+  user: aniteshl
+  become_user: root
+  become_method: sudo
+  become: true
+  
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+        
+  tasks: 
+    - name: Update the line in sshd_config to all for environment variables with pattern RD_*
+      lineinfile: 
+        path: /etc/ssh/sshd_config 
+        line: 'AcceptEnv RD_*' 
+        insertafter: '^# Accept locale-related environment variables' 
+        state: present
+        backup: yes
+      become: true
+      tags: modify_sshd_cponf
+
+    - name: Restart sshd service to take effect.  
+      service: 
+        name: sshd
+        state: restarted 
+      become: true
+      tags: restart_sshd
+
+...

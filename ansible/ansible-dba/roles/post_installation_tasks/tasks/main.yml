@@ -1,0 +1,176 @@
+---
+- name: Disable chronyd
+  service:
+    name: chronyd
+    state: stopped
+    enabled: no 
+  ignore_errors: true
+
+- name: Install/upgrade ntpd. 
+  yum: 
+    name: ntp
+    state: present 
+
+- name: Start and enable ntpd. 
+  service: 
+    name: ntpd
+    state: started
+    enabled: yes
+
+- name: Configure ntp
+  copy: 
+    src: files/ntp.conf
+    dest: /etc/ntp.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  notify: restart NTP service
+  become: true 
+
+- name: Configure "limits.conf"
+  copy: 
+    src: files/limits.conf 
+    dest: /etc/security/limits.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  become: true
+
+- name: Configure OS parameters
+  copy: 
+    src: files/20-oracle.conf
+    dest: /etc/sysctl.d/20-oracle.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  become: true
+
+#- name: Install libvirt-client
+#  yum: 
+#    name: libvirt-client
+#    state: present
+#
+#- name: Start libvirtd.service
+#  service: 
+#    name:  libvirt-guests
+#    state: started
+#  ignore_errors: true
+#
+#- name: Remove virtual nic created with gui install
+#  command: virsh net-destroy default
+#  ignore_errors: true
+#
+#- name: Stop and disable libvirtd.service
+#  service: 
+#    name: libvirt-client
+#    state: stopped
+#    enabled: no
+#  ignore_errors: true
+
+- file: 
+    path: /apps
+    state: directory
+    owner: root 
+    group: oinstall
+
+- file: 
+    path: /apps/infra
+    state: directory
+    owner: grid
+    group: oinstall
+    mode: 0755
+
+- file: 
+    path: /apps/oracle
+    state: directory
+    owner: oracle
+    group: oinstall
+    mode: 0775
+
+- file: 
+    path: /apps/oem
+    state: directory
+    owner: oracle
+    group: oinstall
+    mode: 0775
+
+- file: 
+    path: /jobsched
+    state: directory
+
+- file: 
+    path: /appdata
+    state: directory
+
+- file: 
+    path: /fra
+    state: directory
+
+- file: 
+    path: /JobRoot
+    state: directory
+
+- file: 
+    path: /scratch
+    state: directory
+
+#- lineinfile: 
+#    path: /etc/fstab
+#    state: present
+#    line: 'efs-01-phx:/ifs/data/dba/oracle/oraclerac/prod/racprd_scratch /scratch nfs rw,hard,bg,tcp,nfsvers=3,suid,rsize=32768,wsize=32768,nointr,noac,timeo=600 0 0'
+#    backup: yes
+#
+#- lineinfile: 
+#    path: /etc/fstab
+#    state: present
+#    line: 'efs-01-phx:/ifs/data/dba/oracle/oraclerac/prod/ORAPRD_JOBSCHED /jobsched nfs rw,bg,intr,rsize=32768,wsize=32768,tcp,nfsvers=3,timeo=600 0 0'
+#    backup: yes
+#
+#- lineinfile: 
+#    path: /etc/fstab
+#    state: present
+#    line: 'efs-01-phx:/ifs/data/dba/oracle/oraclerac/dev/celerra_backup_oradev /fra nfs rw,hard,bg,tcp,nfsvers=3,suid,rsize=32768,wsize=32768,nointr,noac,timeo=600 0 0'
+#    backup: yes
+#
+#- lineinfile: 
+#    path: /etc/fstab
+#    state: present
+#    line: 'efs-01-phx:/ifs/data/dba/oracle/oraclerac/dev/ORADEV_JOBROOT /JobRoot nfs rw,bg,hard,noac,intr,rsize=32768,wsize=32768,tcp,nfsvers=3,timeo=600 0 0'
+#    backup: yes
+#
+#- lineinfile: 
+#    path: /etc/fstab
+#    state: present
+#    line: 'efs-01-phx:/ifs/data/dba/oracle/oraclerac/ora_rhel_kdump /var/crash nfs rw,hard,bg,tcp,nfsvers=3,suid,rsize=32768,wsize=32768,nointr,noac,timeo=600 0 0'
+#    backup: yes
+
+- lineinfile: 
+    path: /etc/sysconfig/network
+    state: present
+    line: 'NOZEROCONF=yes'
+    backup: yes
+  tags: sysconfig_network
+
+- name: Create a 2048-bit SSH key for user oracle in ~oracle/.ssh/id_rsa
+  user:
+    name: oracle
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/id_rsa
+  tags: create_oracles_keys
+
+- name: Create a 2048-bit SSH key for user grid in ~grid/.ssh/id_rsa
+  user:
+    name: grid
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/id_rsa
+  tags: create_grids_keys
+
+- name: Reboot Server
+  include_tasks: "roles/selinux/tasks/reboot_server.yml"
+
+...

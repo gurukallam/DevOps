@@ -1,0 +1,137 @@
+.
+├── ansible.cfg
+├── git_update.sh
+├── group_vars
+├── hosts
+├── host_vars
+├── logs
+│   └── ansible.log
+├── master.yml
+├── README
+├── README.txt
+├── retry
+│   └── master.retry
+└── roles
+    ├── common
+    │   ├── files
+    │   │   ├── home
+    │   │   │   ├── pamsvc.tar.gz
+    │   │   │   └── svcqualys.tar.gz
+    │   │   ├── krb5.conf
+    │   │   ├── nsswitch.conf
+    │   │   ├── rhel-6-base-config
+    │   │   │   └── etc
+    │   │   │       ├── audit
+    │   │   │       │   ├── auditd.conf
+    │   │   │       │   └── audit.rules
+    │   │   │       ├── login.defs
+    │   │   │       ├── nsswitch.conf
+    │   │   │       ├── openldap
+    │   │   │       │   └── ldap.conf
+    │   │   │       ├── pam.d
+    │   │   │       │   ├── password-auth-ac
+    │   │   │       │   ├── smartcard-auth-ac
+    │   │   │       │   └── system-auth-ac
+    │   │   │       ├── postfix
+    │   │   │       │   └── main.cf
+    │   │   │       ├── rsyslog.conf
+    │   │   │       ├── ssh
+    │   │   │       │   └── sshd_config
+    │   │   │       ├── sysconfig
+    │   │   │       │   └── snmpd
+    │   │   │       └── sysctl.conf
+    │   │   └── rhel-7-base-config
+    │   │       └── etc
+    │   │           ├── audit
+    │   │           │   ├── auditd.conf
+    │   │           │   └── audit.rules
+    │   │           ├── kdump.conf
+    │   │           ├── login.defs
+    │   │           ├── logrotate.d
+    │   │           ├── openldap
+    │   │           │   └── ldap.conf
+    │   │           ├── pam.d
+    │   │           │   ├── fingerprint-auth-ac
+    │   │           │   ├── password-auth-ac
+    │   │           │   ├── smartcard-auth-ac
+    │   │           │   └── system-auth-ac
+    │   │           ├── postfix
+    │   │           │   └── main.cf
+    │   │           ├── rsyslog.d
+    │   │           │   └── listen.conf
+    │   │           ├── security
+    │   │           │   └── pwquality.conf
+    │   │           ├── ssh
+    │   │           │   └── sshd_config
+    │   │           └── sysconfig
+    │   │               └── authconfig
+    │   ├── handlers
+    │   │   └── main.yml
+    │   ├── tasks
+    │   │   ├── gc-ca-cert.yml
+    │   │   ├── main.yml
+    │   │   ├── rhel-6-base-config.yml
+    │   │   ├── rhel-7-base-config.yml
+    │   │   ├── rhel-base-config.yml
+    │   │   ├── rhel-final-config.yml
+    │   │   └── rhel-sudoers.yml
+    │   └── templates
+    │       ├── 10_eis.j2
+    │       ├── 10_pamsvc.j2
+    │       └── sudoers.j2
+    ├── linux_build_plan
+    │   └── meta
+    │       └── main.yml
+    ├── logrhythm
+    │   ├── defaults
+    │   │   └── main.yml
+    │   ├── files
+    │   │   ├── RHEL6_scsm-7.2.7.8000-1.el6.x86_64.rpm
+    │   │   ├── RHEL7_scsm-7.2.7.8000-1.el7.x86_64.rpm
+    │   │   └── scsm.ini
+    │   ├── handlers
+    │   │   └── main.yml
+    │   ├── tasks
+    │   │   ├── main.yml
+    │   │   ├── rhel6.yml
+    │   │   └── rhel7.yml
+    │   └── templates
+    │       └── scsm_ini.j2
+    ├── packages
+    │   ├── files
+    │   │   ├── filebeat-6.5.1-x86_64.rpm
+    │   │   └── telegraf-1.7.4-1.x86_64.rpm
+    │   ├── tasks
+    │   │   └── main.yml
+    │   └── vars
+    │       ├── default_packages.yml
+    │       └── non_default_packages.yml
+    ├── satellite
+    │   ├── files
+    │   │   ├── rhnplugin.conf
+    │   │   ├── subscription-manager.conf
+    │   │   └── up2date
+    │   ├── tasks
+    │   │   ├── main.yml
+    │   │   ├── rhel-6-sat-config.yml
+    │   │   ├── rhel-7-sat-config.yml
+    │   │   └── rhel-sat-config.yml
+    │   └── templates
+    │       ├── 10_eis.j2
+    │       ├── 10_pamsvc.j2
+    │       └── sudoers.j2
+    ├── services
+    │   ├── tasks
+    │   │   └── main.yml
+    │   └── vars
+    │       └── services.yml
+    └── user_group_management
+        ├── tasks
+        │   ├── eis_admins.yml
+        │   └── main.yml
+        └── vars
+            ├── groups_unix_admins.yml
+            ├── users_eis_admins.yml
+            └── users_unix_admins.yml
+
+52 directories, 82 files

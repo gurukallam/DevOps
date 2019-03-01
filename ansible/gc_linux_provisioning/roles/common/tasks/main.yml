@@ -1,0 +1,22 @@
+---
+- name: Applying base Red Hat configuration
+  include_tasks: "rhel-base-config.yml"
+  when: (ansible_os_family == "RedHat")
+
+- name: Configuring system suders
+  include_tasks: "rhel-sudoers.yml"
+  when: (ansible_os_family == "RedHat")
+
+- name: Applying base Red Hat 6 configuration
+  include_tasks: "rhel-6-base-config.yml"
+  when: (ansible_os_family == "RedHat" and ansible_distribution_major_version == "6")
+
+- name: Applying base Red Hat 7 configuration
+  include_tasks: "rhel-7-base-config.yml"
+  when: (ansible_os_family == "RedHat" and ansible_distribution_major_version == "7")
+
+#- name: Finalizing Red Hat configuration
+#  include_tasks: "rhel-final-config.yml"
+#  when: (ansible_os_family == "RedHat")
+    
+...

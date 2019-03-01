@@ -1,0 +1,159 @@
+---
+- name: Open port for ssh service. 
+  firewalld: 
+    service: ssh
+    permanent: yes
+    state: enabled
+
+- name: Open port for ntp service.
+  firewalld:
+    service: ntp
+    permanent: yes
+    state: enabled
+
+- name: Open port for dhcpv6-client service.
+  firewalld:
+    service: dhcpv6-client
+    permanent: yes
+    state: enabled
+
+- name: Open UDP port for SNMP.
+  firewalld:
+    port: 161-162/udp
+    permanent: yes
+    state: enabled
+
+- name:  Open TCP port for SNMP.
+  firewalld: 
+    port: 162/tcp
+    permanent: yes
+    state: enabled
+
+- name:  Open TCP port for OSU Network Monitoring System.
+  firewalld:
+    port: 192/tcp
+    permanent: yes
+    state: enabled
+
+- name:  Open 13720 TCP port for NETBACKUP.
+  firewalld: 
+    port: 13720/tcp
+    permanent: yes
+    state: enabled
+
+- name:  Open 13782 TCP port for NETBACKUP.
+  firewalld: 
+    port: 13782/tcp
+    permanent: yes
+    state: enabled
+
+- name: Reload firewalld for immediate effect. 
+  shell: firewall-cmd --reload
+
+- name: Copying audit config file. 
+  copy:
+    src: files/rhel-7-base-config/etc/audit/auditd.conf
+    dest: /etc/audit/auditd.conf
+    owner: root
+    group: root
+    mode: 0640
+
+- name: Copying audit.rules file. 
+  copy:
+    src: files/rhel-7-base-config/etc/audit/audit.rules
+    dest: /etc/audit/audit.rules
+    owner: root
+    group: root
+    mode: 0640
+    backup: yes
+
+- name: Copying kdump config file
+  copy:
+    src: files/rhel-7-base-config/etc/kdump.conf
+    dest: /etc/kdump.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying login def file
+  copy:
+    src: files/rhel-7-base-config/etc/login.defs
+    dest: /etc/login.defs
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying LDAP config file
+  copy:
+    src: files/rhel-7-base-config/etc/openldap/ldap.conf
+    dest: /etc/openldap/ldap.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying pam config files into pam.d
+  copy:
+    src: files/rhel-7-base-config/etc/pam.d/
+    dest: /etc/pam.d
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying postfix config file
+  copy:
+    src: files/rhel-7-base-config/etc/postfix/main.cf
+    dest: /etc/postfix/main.cf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying rsyslog files into rsyslog.d
+  copy:
+    src: files/rhel-7-base-config/etc/rsyslog.d/
+    dest: /etc/rsyslog.d
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying pwquality.conf into /etc/security
+  copy:
+    src: files/rhel-7-base-config/etc/security/pwquality.conf
+    dest: /etc/security/pwquality.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying sshd_config into /etc/ssh
+  copy:
+    src: files/rhel-7-base-config/etc/ssh/sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: 0600
+    validate: /usr/sbin/sshd -t %s
+    backup: yes
+
+- name: Copying authconfig into /etc/sysconfig
+  copy:
+    src: files/rhel-7-base-config/etc/sysconfig/authconfig
+    dest: /etc/sysconfig/authconfig
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+#- name: Log completion of rhel-7-base-config.yml to ansible_install.log
+#  lineinfile:
+#    path: /var/log/ansible_install.log
+#    state: present
+#    create: yes
+#    insertafter: EOF
+#    line: "rhel-7-base-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+...

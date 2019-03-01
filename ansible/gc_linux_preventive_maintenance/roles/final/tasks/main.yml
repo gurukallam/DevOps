@@ -1,0 +1,9 @@
+---
+- name: Remove old kernel while keeping the last two.
+  include_tasks: "remove_old_kernel.yml"
+
+- name: Remove old kernel-devel while keeping the last two.
+  include_tasks: "remove_old_kernel_devel.yml"
+
+- name: Remove old kernel-tools while keeping the last two.
+  include_tasks: "remove_old_kernel_tools.yml"

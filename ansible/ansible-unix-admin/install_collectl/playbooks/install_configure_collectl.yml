@@ -1,0 +1,36 @@
+---
+- name: Install and configure collectl on all linux physicals.
+  hosts: "{{ override_hosts | default('GC_SERVERS') }}"
+  become_user: root
+  become_method: sudo
+  become: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars:
+    basedir: '/home/aniteshl/ansible/ansible-unix-admin/install_collectl'
+    files: '{{basedir}}/files'
+
+  tasks:
+    - name: Copy the rpm to remote /tmp.
+      copy: 
+        src: '{{ files }}/collectl-4.0.2-1.el6.noarch.rpm'
+        dest: /tmp
+   
+    - name: Install the rpm.
+      yum: 
+        name: /tmp/collectl-4.0.2-1.el6.noarch.rpm
+        state: present
+
+    - name: Start and enable service.
+      service: 
+        name: collectl
+        state: started
+        enabled: yes
+     
+    - name: Remove the rpm in /tmp.
+      file: 
+        path: /tmp/collectl-4.0.2-1.el6.noarch.rpm
+        state: absent
+...

@@ -1,0 +1,28 @@
+---
+- name: Delete a user from the system.
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars:
+    user_name_or_names:
+      - bgilbert
+      - scurtis 
+
+  tasks:
+    - name: Delete "{{ user_name_or_names }}" from the UNIX systems.
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      become: true
+      tags: delete_existing_user
+      ignore_errors: true
+      with_items: "{{ user_name_or_names }}"
+...

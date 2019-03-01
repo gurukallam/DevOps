@@ -1,0 +1,9 @@
+---
+dependencies:
+   - {role: satellite,             tags: [ 'satellite' ] }
+   - {role: satellite_sat6,        tags: [ 'satellite_sat6' ] }
+   - {role: packages,              tags: [ 'packages' ] }
+   - {role: services,              tags: [ 'services' ] }
+   - {role: common,                tags: [ 'common' ] }
+   - {role: user_group_management, tags: [ 'users' ] }
+   - {role: logrhythm,             tags: [ 'logrhythm' ] }

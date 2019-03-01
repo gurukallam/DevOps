@@ -1,0 +1,6 @@
+---
+- name: Apply package updates
+  include_tasks: "apply_package_updates.yml"
+
+- name: Reboot Server. 
+  include_tasks: "reboot_server.yml"

@@ -1,0 +1,23 @@
+---
+- name: Check uptime. 
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name:  Check uptime. 
+      command: uptime
+      register: uptime_result
+      ignore_errors: true
+
+    - name: See output
+      debug:
+        msg: "{{ uptime_result.stdout }}"
+
+...

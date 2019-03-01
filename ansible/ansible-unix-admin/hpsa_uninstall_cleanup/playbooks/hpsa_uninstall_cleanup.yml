@@ -1,0 +1,44 @@
+---
+- name: Linux HPSA Uninstall Playbook
+  hosts: "{{ override_hosts | default('GC_SERVERS') }}"
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: no
+  max_fail_percentage: 100 # if an entire batch fails abort the entire playbook run
+  strategy: free
+
+  tasks:
+    - name: Check if HPSA agent is installed
+      stat: path=/etc/init.d/opsware-agent
+      register: service_status
+
+    - name: Stop HPSA agent if installed
+      service:
+        name: opsware-agent
+        state: stopped
+      when: service_status.stat.exists
+      register: service_stopped
+
+    - name: Check for HPSA uninstaller
+      stat: path=/opt/opsware/agent/bin/agent_uninstall.sh
+      register: uninstaller_present
+
+    - name: Uninstall HPSA agent
+      shell: yes | /opt/opsware/agent/bin/agent_uninstall.sh
+      args:
+        chdir: /opt/opsware/agent/bin
+        removes: /opt/opsware/agent/bin
+      when: uninstaller_present.stat.exists
+      register: command_result
+      failed_when: "'ERROR' in command_result"
+
+    - name: Change directory from /opt/opsware
+      command: cd
+
+    - name: Remove Opsware directory
+      file:
+        path: /opt/opsware
+        state: absent
+
+...

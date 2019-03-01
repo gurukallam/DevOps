@@ -1,0 +1,7 @@
+# variables for logrhythm install. 
+logrhythm_install_directory: /opt/logrhythm
+logrhythm_rhel6_rpm: RHEL6_scsm-7.2.7.8000-1.el6.x86_64.rpm
+logrhythm_rhel7_rpm: RHEL7_scsm-7.2.7.8000-1.el7.x86_64.rpm
+logrhythm_archive_file_rhel6: roles/logrhythm/files/RHEL6_scsm-7.2.7.8000-1.el6.x86_64.rpm
+logrhythm_archive_file_rhel7: roles/logrhythm/files/RHEL7_scsm-7.2.7.8000-1.el7.x86_64.rpm
+logrhythm_config_file: roles/logrhythm/files/scsm.ini 

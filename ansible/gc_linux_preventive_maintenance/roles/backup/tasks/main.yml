@@ -1,0 +1,4 @@
+---
+- name: Apply package updates
+  include_tasks: "create_snapshot.yml"
+

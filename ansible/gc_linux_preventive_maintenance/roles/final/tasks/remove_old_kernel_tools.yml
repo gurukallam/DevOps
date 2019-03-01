@@ -1,0 +1,26 @@
+---
+- block:
+  - name: Identify the number of kernel-tools. 
+    shell: "rpm -q kernel-tools | wc -l"
+    register: existing_kernel_tools
+
+  - debug: var=existing_kernel_tools.stdout_lines 
+
+  - name: Identify the oldest kernel-tools.
+    shell: "rpm -q kernel-tools | head -1"
+    register: oldest_kernel_tools
+
+  - debug: var=oldest_kernel_tools.stdout_lines
+
+  - name: Identify the latest kernel-tools.
+    shell: "rpm -q kernel-tools | tail -1"
+    register: latest_kernel_tools
+
+  - debug: var=latest_kernel_tools.stdout_lines
+
+  - name: Remove oldest kernel-tools. 
+    yum:
+      name: "{{ oldest_kernel_tools.stdout_lines }}"
+      state: absent
+    when: (( oldest_kernel_tools.stdout_lines != latest_kernel_tools.stdout_lines ) and ( existing_kernel_tools.stdout >= '3' )) 
+...

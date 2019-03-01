@@ -1,0 +1,15 @@
+---
+dependencies:
+   - {role: firewalld,                  tags: [ 'firewalld' ] }
+   - {role: selinux,                    tags: [ 'selinux' ] }
+   - {role: dns,                        tags: [ 'dns' ] }
+   - {role: satellite,                  tags: [ 'satellite' ] }
+   - {role: patchOS,                    tags: [ 'patch' ] }
+   - {role: server_with_gui,            tags: [ 'gui' ] }
+   - {role: packages,                   tags: [ 'packages' ] }
+   - {role: user_group_management,      tags: [ 'users' ] }
+   - {role: ansible-dba-admins,         tags: [ 'dbadmins' ] }
+   - {role: ansible-dba-sudoers,        tags: [ 'dbsudoers' ] }
+   - {role: vncserver,                  tags: [ 'vncserver' ] }
+   - {role: post_installation_tasks,    tags: [ 'posttasks' ] }
+  

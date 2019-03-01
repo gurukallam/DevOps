@@ -1,0 +1,45 @@
+---
+
+- name: Setup Variables.
+  set_fact:
+    ansible_os_family: "{{ansible_os_family}}"
+    os_major_version: "{{ansible_os_family}}{{ansible_distribution_major_version}}"
+
+- name: Import Package Variables
+  include_vars: vars/default_packages.yml
+
+- name: Install Default Packages
+  package: name={{ item.key }} state={{ item.value }}
+  with_dict: "{{ packages.default }}"
+
+- name: Install RedHat/CentOS specific Packages
+  package: name={{ item.key }} state={{ item.value }}
+  with_dict: "{{ packages[ansible_os_family] | default({}) }}"
+  ignore_errors: true
+
+- name: Install RedHat/CentOS (6 or 7) specific Packages
+  package: name={{ item.key }} state={{ item.value }}
+  with_dict: "{{ packages[os_major_version] | default({}) }}"
+  ignore_errors: true
+
+- name: Import Non Default Packages Variables.
+  include_vars: vars/non_default_packages.yml
+
+- name: Copying non default packages to remote host.
+  copy:
+    src: "files/{{ item.name }}"
+    dest: /tmp
+  with_items: "{{ non_default_packages }}"
+
+- name: Installing non default packages on remote host.
+  yum:
+    name: "/tmp/{{ item.name }}"
+    state: present
+  with_items: "{{ non_default_packages }}"
+
+- name: Clean non default packages from remote host.
+  file:
+    path: "/tmp/{{ item.name }}"
+    state: absent
+  with_items: "{{ non_default_packages }}"
+...

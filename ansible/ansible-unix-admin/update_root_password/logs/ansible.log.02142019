@@ -1,0 +1,93 @@
+2019-02-14 13:27:38,873 p=103833 u=aniteshl |  PLAY [Update root password on all Linux systems.] *******************************************************************************************************************************************
+2019-02-14 13:27:38,892 p=103833 u=aniteshl |  TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2019-02-14 13:27:39,320 p=103833 u=aniteshl |  fatal: [mfi-svc-202-lq.mf.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mfi-svc-202-lq.mf.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:39,321 p=103833 u=aniteshl |  fatal: [mfi-svc-101-lq.mf.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mfi-svc-101-lq.mf.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:39,360 p=103833 u=aniteshl |  fatal: [oms-orc-001-lu.domestic.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname oms-orc-001-lu.domestic.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:39,361 p=103833 u=aniteshl |  fatal: [mfi-svc-102-lq.mf.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mfi-svc-102-lq.mf.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:39,376 p=103833 u=aniteshl |  fatal: [mfi-svc-201-lq.mf.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mfi-svc-201-lq.mf.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:39,378 p=103833 u=aniteshl |  fatal: [phx-wfs-001-lp.guitarcenter.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname phx-wfs-001-lp.guitarcenter.com: Name or service not known\r\n", "unreachable": true}
+2019-02-14 13:27:41,192 p=103833 u=aniteshl |  ok: [ora-rac-102-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:41,716 p=103833 u=aniteshl |  ok: [mfi-mdx-001-lp.mf.guitarcenter.com]
+2019-02-14 13:27:41,766 p=103833 u=aniteshl |  ok: [mfi-mdx-002-lp.mf.guitarcenter.com]
+2019-02-14 13:27:42,180 p=103833 u=aniteshl |  ok: [tib-bwx-007-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:42,191 p=103833 u=aniteshl |  fatal: [pam-ftp-001-lp.domestic.guitarcenter.com]: FAILED! => {"msg": "Incorrect sudo password"}
+2019-02-14 13:27:42,279 p=103833 u=aniteshl |  ok: [ora-rac-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:42,604 p=103833 u=aniteshl |  ok: [ora-rac-001-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:42,865 p=103833 u=aniteshl |  ok: [ora-rac-104-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:43,348 p=103833 u=aniteshl |  ok: [ora-rac-902-lp.mf.guitarcenter.com]
+2019-02-14 13:27:43,386 p=103833 u=aniteshl |  ok: [ora-rac-103-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:43,726 p=103833 u=aniteshl |  ok: [ora-rac-901-lp.mf.guitarcenter.com]
+2019-02-14 13:27:43,820 p=103833 u=aniteshl |  ok: [ora-rac-302-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:44,244 p=103833 u=aniteshl |  ok: [ora-rac-002-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:44,290 p=103833 u=aniteshl |  ok: [ora-rac-501-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:44,837 p=103833 u=aniteshl |  ok: [ora-rac-301-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:46,458 p=103833 u=aniteshl |  ok: [ora-rac-105-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:48,628 p=103833 u=aniteshl |  ok: [tib-ems-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:49,096 p=103833 u=aniteshl |  ok: [ora-rac-502-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:50,485 p=103833 u=aniteshl |  ok: [ora-rac-106-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:50,565 p=103833 u=aniteshl |  TASK [Import updated root password.] ********************************************************************************************************************************************************
+2019-02-14 13:27:50,799 p=103833 u=aniteshl |  ok: [mfi-mdx-001-lp.mf.guitarcenter.com]
+2019-02-14 13:27:50,800 p=103833 u=aniteshl |  ok: [mfi-mdx-002-lp.mf.guitarcenter.com]
+2019-02-14 13:27:51,000 p=103833 u=aniteshl |  ok: [ora-rac-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:51,141 p=103833 u=aniteshl |  ok: [ora-rac-103-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:51,494 p=103833 u=aniteshl |  ok: [ora-rac-102-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:51,847 p=103833 u=aniteshl |  ok: [ora-rac-001-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:51,991 p=103833 u=aniteshl |  ok: [ora-rac-002-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:52,397 p=103833 u=aniteshl |  ok: [ora-rac-104-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:52,798 p=103833 u=aniteshl |  ok: [ora-rac-106-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:53,154 p=103833 u=aniteshl |  ok: [ora-rac-105-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:53,469 p=103833 u=aniteshl |  ok: [ora-rac-502-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:53,892 p=103833 u=aniteshl |  ok: [ora-rac-301-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:54,202 p=103833 u=aniteshl |  ok: [ora-rac-501-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:54,455 p=103833 u=aniteshl |  ok: [ora-rac-302-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:54,702 p=103833 u=aniteshl |  ok: [ora-rac-901-lp.mf.guitarcenter.com]
+2019-02-14 13:27:54,857 p=103833 u=aniteshl |  ok: [ora-rac-902-lp.mf.guitarcenter.com]
+2019-02-14 13:27:54,895 p=103833 u=aniteshl |  ok: [tib-bwx-007-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:54,953 p=103833 u=aniteshl |  ok: [tib-ems-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:55,033 p=103833 u=aniteshl |  TASK [Update root password.] ****************************************************************************************************************************************************************
+2019-02-14 13:27:55,947 p=103833 u=aniteshl |  changed: [ora-rac-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:56,304 p=103833 u=aniteshl |  changed: [ora-rac-102-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:56,305 p=103833 u=aniteshl |  changed: [ora-rac-103-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:56,857 p=103833 u=aniteshl |  changed: [mfi-mdx-002-lp.mf.guitarcenter.com]
+2019-02-14 13:27:56,858 p=103833 u=aniteshl |  changed: [mfi-mdx-001-lp.mf.guitarcenter.com]
+2019-02-14 13:27:57,277 p=103833 u=aniteshl |  changed: [ora-rac-001-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:57,278 p=103833 u=aniteshl |  changed: [ora-rac-104-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:57,612 p=103833 u=aniteshl |  changed: [ora-rac-002-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:57,613 p=103833 u=aniteshl |  changed: [ora-rac-106-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:58,287 p=103833 u=aniteshl |  changed: [ora-rac-105-lq.domestic.guitarcenter.com]
+2019-02-14 13:27:58,289 p=103833 u=aniteshl |  changed: [ora-rac-502-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:58,608 p=103833 u=aniteshl |  changed: [ora-rac-301-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:59,129 p=103833 u=aniteshl |  changed: [ora-rac-501-lp.domestic.guitarcenter.com]
+2019-02-14 13:27:59,394 p=103833 u=aniteshl |  changed: [ora-rac-302-lp.domestic.guitarcenter.com]
+2019-02-14 13:28:00,098 p=103833 u=aniteshl |  changed: [tib-bwx-007-lq.domestic.guitarcenter.com]
+2019-02-14 13:28:00,685 p=103833 u=aniteshl |  changed: [tib-ems-101-lq.domestic.guitarcenter.com]
+2019-02-14 13:28:01,020 p=103833 u=aniteshl |  changed: [ora-rac-902-lp.mf.guitarcenter.com]
+2019-02-14 13:28:01,097 p=103833 u=aniteshl |  changed: [ora-rac-901-lp.mf.guitarcenter.com]
+2019-02-14 13:28:01,111 p=103833 u=aniteshl |  	to retry, use: --limit @/home/aniteshl/ansible/ansible-unix-admin/update_root_password/retry/update_root_password.retry
+
+2019-02-14 13:28:01,112 p=103833 u=aniteshl |  PLAY RECAP **********************************************************************************************************************************************************************************
+2019-02-14 13:28:01,112 p=103833 u=aniteshl |  mfi-mdx-001-lp.mf.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,112 p=103833 u=aniteshl |  mfi-mdx-002-lp.mf.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,112 p=103833 u=aniteshl |  mfi-svc-101-lq.mf.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  mfi-svc-102-lq.mf.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  mfi-svc-201-lq.mf.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  mfi-svc-202-lq.mf.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  oms-orc-001-lu.domestic.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  ora-rac-001-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,113 p=103833 u=aniteshl |  ora-rac-002-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,114 p=103833 u=aniteshl |  ora-rac-101-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,114 p=103833 u=aniteshl |  ora-rac-102-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,114 p=103833 u=aniteshl |  ora-rac-103-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,114 p=103833 u=aniteshl |  ora-rac-104-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,114 p=103833 u=aniteshl |  ora-rac-105-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,115 p=103833 u=aniteshl |  ora-rac-106-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,115 p=103833 u=aniteshl |  ora-rac-301-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,115 p=103833 u=aniteshl |  ora-rac-302-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,115 p=103833 u=aniteshl |  ora-rac-501-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,115 p=103833 u=aniteshl |  ora-rac-502-lp.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,116 p=103833 u=aniteshl |  ora-rac-901-lp.mf.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,116 p=103833 u=aniteshl |  ora-rac-902-lp.mf.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,116 p=103833 u=aniteshl |  pam-ftp-001-lp.domestic.guitarcenter.com : ok=0    changed=0    unreachable=0    failed=1   
+2019-02-14 13:28:01,116 p=103833 u=aniteshl |  phx-wfs-001-lp.guitarcenter.com : ok=0    changed=0    unreachable=1    failed=0   
+2019-02-14 13:28:01,117 p=103833 u=aniteshl |  tib-bwx-007-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-14 13:28:01,117 p=103833 u=aniteshl |  tib-ems-101-lq.domestic.guitarcenter.com : ok=3    changed=1    unreachable=0    failed=0   

@@ -1,0 +1,10 @@
+---
+- name: Update "/etc/resolv.conf"
+  copy: 
+    src: files/resolv.conf
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: 0664
+    backup: yes
+  become: true

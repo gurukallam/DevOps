@@ -1,0 +1,184 @@
+---
+- name: Open port for ssh service.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 22 
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name: Open port for ntp service.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 123 
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name: Open UDP port for SNMP.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: udp
+    destination_port: 161:162
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name:  Open TCP port for SNMP.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 162
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name:  Open TCP port for OSU Network Monitoring System.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 192
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name:  Open 13720 TCP port for NETBACKUP.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 13720
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name:  Open 13782 TCP port for NETBACKUP.
+  iptables:
+    chain: INPUT
+    ctstate: NEW
+    protocol: tcp
+    destination_port: 13782
+    jump: ACCEPT
+    state: present
+  become: yes
+
+- name: Restart iptables immediate effect.
+  #notify: restart iptables
+  service: 
+    name: iptables
+    state: restarted
+
+- name: Copying audit config file.
+  copy:
+    src: files/rhel-6-base-config/etc/audit/auditd.conf
+    dest: /etc/audit/auditd.conf
+    owner: root
+    group: root
+    mode: 0640
+    backup: yes
+
+- name: Copying audit rules file.
+  copy:
+    src: files/rhel-6-base-config/etc/audit/audit.rules
+    dest: /etc/audit/audit.rules
+    owner: root
+    group: root
+    mode: 0640
+    backup: yes
+
+- name: Copying login def file.
+  copy:
+    src: files/rhel-6-base-config/etc/login.defs
+    dest: /etc/login.defs
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copying nsswitch config file.
+  copy:
+    src: files/rhel-6-base-config/etc/nsswitch.conf
+    dest: /etc/nsswitch.conf
+    owner: root
+    group: root
+    mode: 0600
+    backup: yes
+
+- name: Copying LDAP config file.
+  copy:
+    src: files/rhel-6-base-config/etc/openldap/ldap.conf
+    dest: /etc/openldap/ldap.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying pam config files into pam.d.
+  copy:
+    src: files/rhel-6-base-config/etc/pam.d/
+    dest: /etc/pam.d
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying postfix config file.
+  copy:
+    src: files/rhel-6-base-config/etc/postfix/main.cf
+    dest: /etc/postfix/main.cf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying rsyslog files into rsyslog.d.
+  copy:
+    src: files/rhel-6-base-config/etc/rsyslog.conf
+    dest: /etc/rsyslog.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying sshd_config into /etc/ssh
+  copy:
+    src: files/rhel-6-base-config/etc/ssh/sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: 0600
+    validate: /usr/sbin/sshd -t %s
+    backup: yes
+
+- name: Copying snmpd into /etc/sysconfig.
+  copy:
+    src: files/rhel-6-base-config/etc/sysconfig/snmpd
+    dest: /etc/sysconfig/snmpd
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copying sysctl.conf into /etc
+  copy:
+    src: files/rhel-6-base-config/etc/sysctl.conf
+    dest: /etc/sysctl.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+#- name: Log completion of rhel-6-base-config.yml to ansible_install.log
+#  lineinfile:
+#    path: /var/log/ansible_install.log
+#    state: present
+#    create: yes
+#    insertafter: EOF
+#    line: "rhel-6-base-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+...

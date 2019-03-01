@@ -1,0 +1,4 @@
+---
+  non_default_packages:
+    - { name: filebeat-6.5.1-x86_64.rpm }
+    - { name: telegraf-1.7.4-1.x86_64.rpm }

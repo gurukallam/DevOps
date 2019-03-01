@@ -1,0 +1,6 @@
+---
+users_eis_admins:
+  - {name: akhokhar, uid: 8246, group: eis, shell: /bin/bash, comment: 'Aslam Khokhar - EIS Team'}
+  - {name: srichardson, uid: 9050, password: $6$Roz5KCXB$WLcw8vBjjV9PhAI5R10Qh1uEryj0DF.MZZLbV7X3yVHPTdd6i3awBMiw6Z80HKeOjNROVw5DY7MOFvFPNnNn4., group: eis, shell: /bin/bash, comment: 'Sean Richardson - EIS Team'}
+  - {name: myoung, uid: 9024, group: eis, shell: /bin/bash, comment: 'Miles Young - EIS Team'}
+  - {name: rwilcox, uid: 9025, password: $1$123$6y98TcdtSq7.Qbp7lEFVI/, group: eis, shell: /bin/bash, comment: 'Rob Wilcox - EIS Team'}

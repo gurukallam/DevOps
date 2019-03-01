@@ -1,0 +1,54 @@
+---
+- name: Copy "rhnplugin.conf" to "/etc/yum/pluginconf.d/rhnplugin.conf".
+  copy: 
+    src: files/rhnplugin.conf 
+    dest: /etc/yum/pluginconf.d/rhnplugin.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copy "subscription-manager.conf" to "/etc/yum/pluginconf.d/subscription-manager.conf".
+  copy: 
+    src: files/subscription-manager.conf
+    dest: /etc/yum/pluginconf.d/subscription-manager.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Copy "up2date" to "/etc/sysconfig/rhn/up2date".
+  copy: 
+    src: files/up2date
+    dest: /etc/sysconfig/rhn/up2date
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: Capture any pre-existing "rhn-org-trusted-ssl-cert".
+  shell: "rpm -qa | grep rhn-org-trusted-ssl-cert"
+  register: pre_existing
+  ignore_errors: yes
+
+- name: Remove pre-existing "rhn-org-trusted-ssl-cert" if any. 
+  yum: 
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ pre_existing.stdout_lines }}"
+  ignore_errors: yes
+
+- name: Install "katello-ca-consumer-inf-sat-001-lp.domestic.guitarcenter.com-1.0-1.noarch.rpm"
+  yum: 
+    name: http://inf-sat-001-lp.domestic.guitarcenter.com/pub/katello-ca-consumer-inf-sat-001-lp.domestic.guitarcenter.com-1.0-1.noarch.rpm
+    state: present
+
+#- name: Log completion of rhel-sat-config.yml to ansible_install.log
+#  lineinfile:
+#    path: /var/log/ansible_install.log
+#    state: present
+#    create: yes
+#    insertafter: EOF
+#    line: "rhel-sat-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+
+...

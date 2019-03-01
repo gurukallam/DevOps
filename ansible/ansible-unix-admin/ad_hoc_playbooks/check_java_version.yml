@@ -1,0 +1,34 @@
+---
+- name: Check if java is installed
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Check if java is installed.
+      command: java -version
+      register: java_result
+      ignore_errors: true
+
+    - debug:
+        msg: "Failed - Java is not installed"
+      when: java_result is failed
+
+    - debug:
+        msg: "Success - Java is installed on {{ ansible_fqdn }}"
+      when:  java_result is success
+
+    - debug:
+        msg: "OpenJdk is installed on {{ ansible_fqdn }}"
+      when: "'openjdk' or 'OpenJDK' in java_result.stdout_lines"
+      ignore_errors: true
+
+#    - debug:
+#        msg: "Oracle Java is installed on {{ ansible_fqdn }}"
+#      when: "'Java(TM)' or 'Java HotSpot(TM)' in java_result.stdout_lines"
+...

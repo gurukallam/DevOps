@@ -1,0 +1,16 @@
+---
+- name: Add DBA admins on a new host.
+  hosts:  "{{ override_hosts | default('all') }}"
+  #hosts: 127.0.0.1
+  #connection: local 
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  roles:
+    - /home/aniteshl/ansible/ansible-dba/roles/ansible-dba-sudoers 
+...

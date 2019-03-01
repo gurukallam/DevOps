@@ -1,0 +1,8 @@
+---
+dependencies:
+   - {role: monitoring,          tags: [ 'monitoring' ] }
+   - {role: backup,              tags: [ 'snapshot' ] , when: ansible_virtualization_type == 'VMware'}
+   - {role: patchOS,             tags: [ 'patchOS' ] }
+   - {role: vmtools,             tags: [ 'vmtools' ] , when: ansible_virtualization_type == 'VMware'}
+   - {role: final,               tags: [ 'final' ] }
+   - {role: reboot,              tags: [ 'reboot' ] }

@@ -1,0 +1,13 @@
+---
+- name: Configure Wazuh-manager on a new host.
+  hosts:  "{{ override_hosts | default('all') }}"
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  roles:
+    - role: /home/aniteshl/ansible/wazuh-ansible/roles/wazuh/ansible-wazuh-manager
+    #- { role: /home/aniteshl/ansible/wazuh-ansible/roles/wazuh/ansible-filebeat, filebeat_output_logstash_hosts: '10.160.88.150' }
+
+...

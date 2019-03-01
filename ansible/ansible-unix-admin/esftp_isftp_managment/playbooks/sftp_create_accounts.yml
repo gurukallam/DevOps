@@ -1,0 +1,196 @@
+##############################################################
+# USAGE:
+# For single host: ansible-playbook --extra-vars 'override_hosts=inf-esftp-001-lp' sftp_create_accounts.yml --list-hosts (replace "--list-hosts" with "-kK" for actual run)
+# For multiple host: ansible-playbook --extra-vars 'override_hosts=SFTP_SERVERS' sftp_create_accounts.yml --list-hosts (replace "--list-hosts" with "-kK" for actual run)
+#
+# If account is IDENTICAL on both iSFTP AND eSFTP, then
+# ansible-playbook --extra-vars 'override_hosts=inf-esftp-001-lp,inf-isftp-001-lp' sftp_create_accounts.yml -kK
+#
+# If account is DIFFERENT on iSFTP AND eSFTP, then modify the "vars:" section as needed and then execute on single host ONLY.
+# ansible-playbook --extra-vars 'override_hosts=inf-esftp-001-lp' sftp_create_accounts.yml -Kk
+#                                              or
+# ansible-playbook --extra-vars 'override_hosts=inf-esftp-001-lp' sftp_create_accounts.yml -Kk
+##############################################################
+---
+- name: Create sftp accounts for external and/or intenal use.
+  hosts: "{{ override_hosts | default('SFTP_SERVERS') }}"
+  become_user: root
+  become_method: sudo
+  become: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+
+  vars:
+    # MUST BE PREPOPULATED. This is the only block that needs to be edited.
+    - user_name: svc_test
+    - user_shell: /sbin/nologin
+    #- user_shell: /bin/bash
+    - user_pub_key: ""
+    #- user_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC44oH+G/uZBo6Hu0Mg9sEEV+nHin9uthebboSCrhLkjAFcM7WLHpammWigjrOQLdLSH8xISX9OZLjcyM66fSIdErGN4ko9u7lx4KLR1C0iWpG4LbpPNj753vCTTzS3uTXMhD+lm+UD55awykSnYHYHQnUISgRFKwA6wi3wWvl9mCgqqfBKECiFcyweCCLMzuuQDDx3u/MOp01R6PW/pAifWndkRWR0RUW8bx4gpiRLP+LAPlHQ3P0Pj5/HOn6vsZTQfvcjmWLH1gPLau9sd2pLfyJrGeuFvwfeYpsHkvHdu9B0OW/xI0v28yE+e0Wa9ah2yUhSmsEKP6MzNNdpW+DP"
+    - comment_about_user: This is a random test user.
+    - user_password: somerand0m$$w0rd
+    - group_name: svc_comp2
+    - group_gid: 10000005
+    - external_to_internal_dir: frmsvc_test4
+    - external_to_internal_dir_alias: frmsvc_test4
+    - internal_to_external_dir: tosvc_test4
+    - internal_to_external_dir_alias: tosvc_test4
+
+    # Do not edit this variable.
+    - vshelld_config_file: /usr/local/etc/vshelld_config
+    #- vshelld_config_file: vshelld_config
+
+
+    # THE FOLLOWING CODE NEED NOT BE MODIFIED ALL THE TIME.
+  tasks:
+    - name: Create the group that the new user will below to.
+      group:
+        name: "{{item.name}}"
+        gid: "{{item.gid}}"
+      become: true
+      tags: add_new_group
+      with_items:
+        - {name: "{{group_name}}", gid: "{{group_gid}}" }
+
+    - name: Add sftpsvc to the "{{group_name}}"
+      user:
+        name: sftpsvc
+        groups: "{{item.name}}"
+        append: yes
+      become: true
+      tags: add_sftpsvc_to_new_group
+      with_items:
+        - {name: "{{group_name}}"}
+
+    - name: Add new service user.
+      user:
+        name: "{{ item.name }}"
+        group: "{{ item.group }}"
+        comment: "{{ item.comment }}"
+        shell: "{{ item.shell }}"
+        password: "{{ user_password | password_hash('sha512') }}"
+        expires: -1
+        state: present
+      tags: add_new_service_user
+      with_items:
+        - {name: "{{user_name}}", group: "{{group_name}}", shell: "{{user_shell}}", comment: "{{comment_about_user}}" }
+
+    - name: Set account expiry to never.
+      command: chage -E -1 "{{user_name}}"
+      become: true
+      tags: set_account_expiry_to_never
+
+    - name: Set authorized public keys for the user if any.
+      authorized_key:
+        user: "{{item.name}}"
+        key: "{{item.key}}"
+        state: present
+      become: true
+      ignore_errors: true
+      tags: update_authorized_keys
+      with_items:
+        - {name: "{{user_name}}", key: "{{user_pub_key}}" }
+
+    - name: Create the EI FTP Directory.
+      file:
+        path: /data/ei/{{item.name}}
+        state: directory
+        owner: root
+        group: "{{group_name}}"
+        mode: 0770
+      become: true
+      tags: create_ei_ftp_dir
+      with_items:
+        - {name: "{{external_to_internal_dir}}" }
+
+    - name: Create the IE FTP to be shared.
+      file:
+        path: /data/ie/{{item.name}}
+        state: directory
+        owner: root
+        group: "{{group_name}}"
+        mode: 0770
+      become: true
+      tags: create_ie_ftp_dir
+      with_items:
+        - {name: "{{internal_to_external_dir}}" }
+
+######################################################
+# Configuring Internal to External Setup on both iSFTP and eSFTP.
+
+    - name: Edit vshell config on isftp for internal to external setup.
+      blockinfile:
+        path: "{{vshelld_config_file}}"
+        marker: "# ANSIBLE MANAGED BLOCK for {{internal_to_external_dir_alias}}"
+        block: |9
+                  Alias "{{internal_to_external_dir_alias}}"{
+                   Directory "/data/ie/{{internal_to_external_dir}}"
+                   Allowusers { sftpsvc,{{user_name}} }
+                  }
+        insertbefore: "^[}]"
+        backup: yes
+      tags: update_isftp_vshelld_config_int_to_ext
+      when: "'inf-isftp' in inventory_hostname"
+
+    - name: Edit vshell config on esftp for internal to external setup.
+      blockinfile:
+        path: "{{vshelld_config_file}}"
+        marker: "# ANSIBLE MANAGED BLOCK for {{internal_to_external_dir_alias}}"
+        block: |9
+                   Alias "{{internal_to_external_dir_alias}}"{
+                    Directory "/data/ie/{{internal_to_external_dir}}"
+                    Allowusers { sftpsvc,{{user_name}} }
+                   }
+        insertbefore: "^[}]"
+        backup: yes
+      tags: update_esftp_vshelld_config_int_to_ext
+      when: "'inf-esftp' in inventory_hostname"
+
+######################################################
+## Configuring External to Internal Setup on both iSFTP and eSFTP.
+
+    - name: Edit vshell config on esftp for external to internal setup.
+      blockinfile:
+        path: "{{vshelld_config_file}}"
+        marker: "# ANSIBLE MANAGED BLOCK for {{external_to_internal_dir_alias}}"
+        block: |9
+                  Alias "{{external_to_internal_dir_alias}}"{
+                   Directory "/data/ei/{{external_to_internal_dir}}"
+                   Allowusers { sftpsvc,{{user_name}} }
+                  }
+        insertbefore: "^[}]"
+        backup: yes
+      tags: update_esftp_vshelld_config_ext_to_int
+      when: "'inf-esftp' in inventory_hostname"
+
+    - name: Edit vshell config on isftp for external to internal setup.
+      blockinfile:
+        path: "{{vshelld_config_file}}"
+        marker: "# ANSIBLE MANAGED BLOCK for {{external_to_internal_dir_alias}}"
+        block: |9
+                  Alias "{{external_to_internal_dir_alias}}"{
+                   Directory "/data/ei/{{external_to_internal_dir}}"
+                   Allowusers { sftpsvc,{{user_name}} }
+                  }
+        insertbefore: "^[}]"
+        backup: yes
+      tags: update_isftp_vshelld_config_ext_to_int
+      when: "'inf-isftp' in inventory_hostname"
+
+#####################################################
+## This command is not indempotemt.
+    - name: Give Login, SFTP, and SCP for the user.
+      replace:
+        path:  "{{vshelld_config_file}}"
+        regexp: 'so99,validfiles'
+        replace: 'so99,validfiles,{{group_name}}'
+      tags: give_login_sftp_scp
+
+    - name: restart vshelld service
+      service: name=vshelld state=restarted
+      become: true
+      tags: restart_vshelld
+
+...

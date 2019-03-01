@@ -1,0 +1,5 @@
+---
+user: oracle
+group_name: oinstall
+password: password
+display: :2

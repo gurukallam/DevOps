@@ -1,0 +1,20 @@
+---
+
+- name: Running yum update
+  yum:
+    name: '*'
+    state: latest
+
+- name: Log completion of rhel-final-config.yml to ansible_install.log
+  lineinfile:
+    path: /var/log/ansible_install.log
+    state: present
+    create: yes
+    insertafter: EOF
+    line: "rhel-final-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+
+- name: Restarting server
+  command: /sbin/shutdown -r +1
+  async: 0
+  poll: 0
+  ignore_errors: true

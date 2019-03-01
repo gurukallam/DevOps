@@ -1,0 +1,11 @@
+---
+- name: apply package updates
+  script: "{{pkg_mgmt}} --no-reboot --update" 
+  become: true
+  register: update_result
+
+- name: reboot server following package update
+  include_tasks: "reboot_server.yml"
+  become: true
+  #when: "'reboot required' in update_result.stdout"
+...

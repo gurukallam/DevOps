@@ -1,0 +1,16 @@
+---
+- block: 
+    - name: Copying "{{ logrhythm_archive_file_rhel6 }}" on remote host. 
+      copy: 
+        src: "{{ logrhythm_archive_file_rhel6 }}"
+        dest: /opt
+
+    - name: Installing "{{ logrhythm_archive_file_rhel6 }}" on a Rhel 6.x host. 
+      yum: 
+        name: "/opt/{{ logrhythm_rhel6_rpm }}" 
+        state: present
+
+    - name: Clean up rpm rhel6
+      file: 
+        path: "/opt/{{ logrhythm_rhel6_rpm }}"
+        state: absent

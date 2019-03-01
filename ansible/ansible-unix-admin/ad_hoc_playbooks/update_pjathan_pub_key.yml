@@ -1,0 +1,22 @@
+---
+- name: Update user pjathan's pub key.
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  #hosts: 127.0.0.1
+  #connection: local
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Set authorized key taken from file
+      authorized_key:
+        user: pjathan
+        state: present
+        key: "{{ lookup('file', '/home/aniteshl/ansible/ansible-unix-admin/files/pjathan_id_ecdsa.pub') }}"
+      become: true
+...

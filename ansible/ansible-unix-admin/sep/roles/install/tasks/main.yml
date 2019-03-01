@@ -1,0 +1,7 @@
+---
+- name: Install SEP on Rhel 7.x servers.
+  include_tasks: "rhel7-sep-install.yml"
+  #when: (ansible_os_family == "RedHat" and ansible_distribution_version >= "7.3")
+  #      (ansible_os_family == 'CentOS' and ansible_distribution_major_version == '7.3')
+
+...

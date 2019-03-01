@@ -1,0 +1,69 @@
+---
+packages:
+  default:
+    rsyslog: latest
+    sysstat: latest
+    ntp: latest
+    autofs: latest
+    postfix: latest
+
+  RedHat:
+    libselinux-python: latest
+    net-snmp: latest
+    net-snmp-utils: latest
+    krb5-workstation: latest
+    krb5-libs: latest
+    nscd: latest
+    rpcbind: latest
+    openldap-clients: latest
+    nss-pam-ldapd: latest
+    pam_krb5: latest
+    mount.nfs: latest
+    lsof: latest
+    tcpdump: latest
+    strace: latest
+    net-tools: latest
+
+  RedHat6:
+    pam_ldap: latest
+    pam_passwdqc: latest
+    yum-plugin-security: latest
+
+  RedHat7:
+    snmpd: latest
+    firewalld: latest
+    avahi-daemon: absent
+    chrony: absent
+    NetworkManager: latest
+
+# This are packages related to CentOS.
+# Might not be needed down the road.
+
+  CentOS:
+    libselinux-python: latest
+    net-snmp: latest
+    net-snmp-utils: latest
+    krb5-workstation: latest
+    krb5-libs: latest
+    nscd: latest
+    rpcbind: latest
+    openldap-clients: latest
+    nss-pam-ldapd: latest
+    pam_krb5: latest
+    mount.nfs: latest
+    lsof: latest
+    tcpdump: latest
+    strace: latest
+    net-tools: latest
+
+  CentOS6:
+    pam_ldap: latest
+    pam_passwdqc: latest
+    yum-plugin-security: latest
+
+  CentOS7:
+    snmpd: latest
+    firewalld: latest
+    avahi-daemon: absent
+    chrony: absent
+    NetworkManager: latest

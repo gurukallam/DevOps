@@ -1,0 +1,52 @@
+---
+- name: Load DBA group(s) information.
+  include_vars: vars/groups_dba_service_accounts.yml 
+
+- name: Add DBA group to the new host.
+  group:
+    name: "{{ item.name }}" 
+    gid: "{{ item.gid }}"
+    state: "{{ item.state }}"
+  ignore_errors: true
+  with_items: "{{ groups_dba_service_accounts }}"
+  tags:
+    - add_dba_groups
+
+- name: Load DBA user(s) information.
+  include_vars: vars/users_dba_admins.yml 
+
+- name: Add DBA admins to the new host.
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid | default(omit) }}"
+    comment: "{{ item.comment | default('') }}"
+    group: "{{ item.group | default(item.name) }}"
+    password: "{{ item.password | default('$6$eW52tTL6VnzSNXqb$sUPoq54ioMxZKkAT1HZKNxfZCRrtq8yVQbwEE1YITEP8ZdutUZXbId4fa7hNC15L3vnuyrUXdvD3SjJ4EUBGk.') }}"
+    update_password: "{{ item.update_password | default('always') }}"
+    shell: "{{ item.shell | default('/bin/bash') }}"
+    home: "{{ item.home | default(('/' if item.name == 'root' else '/home/') + item.name) }}"
+    system: "{{ item.system | default(false) }}"
+    state: "{{ item.state | default('present') }}"
+    remove: "{{ item.remove | default(false) }}"
+  with_items: "{{ users_dba_admins }}"
+  ignore_errors: true
+  tags:
+    - add_users_dba_admins
+
+- name: Add Grid's secondary groups. 
+  user: 
+    name: grid
+    groups: dba,asmadmin,asmdba,asmoper
+    append: yes
+  tags: 
+    - add_grids_secondary_groups
+
+- name: Add Oracles's secondary groups.
+  user:
+    name: oracle
+    groups: oper,asmdba,jobsched
+    append: yes
+  tags:
+    - add_grids_secondary_groups
+
+...

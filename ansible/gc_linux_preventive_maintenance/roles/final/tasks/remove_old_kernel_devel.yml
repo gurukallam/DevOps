@@ -1,0 +1,26 @@
+---
+- block:
+  - name: Identify the number of kernel-devel. 
+    shell: "rpm -q kernel-devel | wc -l"
+    register: existing_kernel_devel
+
+  - debug: var=existing_kernel_devel.stdout_lines 
+
+  - name: Identify the oldest kernel-devel.
+    shell: "rpm -q kernel-devel | head -1"
+    register: oldest_kernel_devel
+
+  - debug: var=oldest_kernel_devel.stdout_lines
+
+  - name: Identify the latest kernel-devel.
+    shell: "rpm -q kernel-devel | tail -1"
+    register: latest_kernel_devel
+
+  - debug: var=latest_kernel_devel.stdout_lines
+
+  - name: Remove oldest kernel-devel. 
+    yum:
+      name: "{{ oldest_kernel_devel.stdout_lines }}"
+      state: absent
+    when: (( oldest_kernel_devel.stdout_lines != latest_kernel_devel.stdout_lines ) and ( existing_kernel_devel.stdout >= '3' )) 
+...

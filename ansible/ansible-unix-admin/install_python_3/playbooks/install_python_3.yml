@@ -1,0 +1,63 @@
+---
+- name: Install Python 3 in a non-default location.
+  hosts: "{{ override_hosts | default('GCAP_SERVERS') }}"
+  become_user: root
+  become_method: sudo
+  become: true
+  gather_facts: false
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars:
+    install_directory: '/usr/local/bin/'
+    python_version: 3.6.5
+
+  tasks:
+    - name: Download the tar file locally.
+      get_url:
+        url: 'https://www.python.org/ftp/python/{{python_version}}/Python-{{python_version}}.tgz'
+        dest: "{{ install_directory }}"
+      tags: download_tar_file
+
+    - name: Uninstall the tar file in "{{install_directory}}"
+      unarchive:
+        src: "{{ install_directory }}/Python-{{python_version}}.tgz"
+        dest: "{{ install_directory }}"
+      tags: unarchive_tar_file
+
+    - name: Install Development Tools
+      yum:
+        name: "@Development Tools"
+        state: present
+      ignore_errors: true
+      tags: install_dev_tools
+
+    - name: Install addtional library.
+      yum:
+        name: zlib-devel
+        state: present
+      ignore_errors: true
+      tags: install_additional_library
+
+    - name: Configure Python-3
+      command: "'{{ install_directory }}/Python-{{python_version}}/configure' --enable-optimizations --with-ensurepip=install"
+      args:
+        chdir: '{{ install_directory }}/Python-{{python_version}}/'
+      tags: run_configure
+
+    - name: Make Python-3
+      shell: |
+        make -j 8
+        make altinstall
+      args:
+        chdir: '{{ install_directory }}/Python-{{python_version}}/'
+      tags: run_make
+
+    - name: Clean up the tar_file.
+      file:
+        path: "{{ install_directory }}/Python-{{python_version}}.tgz"
+        state: absent
+      tags: delete_tar_file
+
+...

@@ -1,0 +1,22 @@
+---
+- name: Yum Check Update.
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  #hosts: 127.0.0.1
+  #connection: local
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Install Katello Agent if not installed.
+      yum:
+        name: katello-agent
+        state: latest
+ 
+    - name: Run "katello-package-upload".
+      command: yum check-update
+...

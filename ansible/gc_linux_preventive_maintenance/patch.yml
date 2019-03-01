@@ -1,0 +1,32 @@
+---
+- name: Execute GC Linux Patching playbook on a remote host.
+  hosts:  "{{ override_hosts | default('all') }}"
+  #hosts: localhost
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars: 
+    basedir: '/home/aniteshl/ansible/gc_linux_preventive_maintenance'
+    scripts: '{{ basedir }}/scripts'
+    pkg_mgmt: '{{ scripts }}/Manage_Packages_on_RHEL.sh' 
+    reboot_delay: 120
+    max_reboot_time: 600
+    physical_reboot_delay: 300
+    physical_max_reboot_time: 1800
+    virtual_product_names:
+      - 'VMware Virtual Platform'
+      - 'VirtualBox'
+      - 'KVM'
+      - 'Bochs'
+      - 'Microsoft VirtualPC'
+      - 'Virtual Machine'
+      - 'HVM domU'
+
+  roles:
+    - { role: linux_patching }
+...

@@ -1,0 +1,74 @@
+---
+- name: Check if logrhythm is already installed on the host. 
+  stat: 
+    path: "{{ logrhythm_install_directory }}"
+  register: logrhythm_install_directory
+  become: true
+  tags: check_if_inst_dir_present
+
+- name: Fail if logrhythm installation directory is already present. 
+  fail: 
+    msg: "ERROR: logrhythm installation directory is already present...Exiting." 
+  when: logrhythm_install_directory.stat.isdir is defined and logrhythm_install_directory.stat.isdir 
+  become: true
+  tags: fail_if_inst_dir_present
+
+- name: Install logrhythm package (RHEL 6.x).
+  include: rhel6.yml
+  when: (ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6') or
+        (ansible_os_family == 'CentOS' and ansible_distribution_major_version == '6')
+  become: true
+  tags: inst_rhel_6_rpm
+
+- name: Install logrhythm package (RHEL 7.x).
+  include: rhel7.yml
+  when: (ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7') or
+        (ansible_os_family == 'CentOS' and ansible_distribution_major_version == '7')
+  become: true
+  tags: inst_rhel_7_rpm
+
+- name: Configure logrhythm service. 
+  service: 
+    name: scsm
+    enabled: yes
+    state: started
+  become: true
+  tags: enable_start_service
+
+- name: Configure logrhythm.
+  template: 
+    src: scsm_ini.j2
+    #dest: "{{ logrhythm_install_directory }}/scsm/config/scsm.ini"
+    dest: /opt/logrhythm/scsm/config/scsm.ini
+    backup: yes
+  become: true
+  notify: restart scsm 
+  tags: configure_logrhythm
+
+- name: Clean up any bad actor artifacts.
+  file: 
+    path: /opt/logrhythm/scsm/config/agentguid.cfg
+    state: absent
+  become: true
+  tags: clean_bad_artifacts
+
+- name: Change mode of the "/opt/logrhythm".
+  file: 
+    path: /opt/logrhythm
+    mode: 0770
+  become: true
+  ignore_errors: true
+  tags: change_mode_opt_logrhythm
+
+- name: Change ownership of the "/opt/logrhythm".
+  file: 
+    path: /opt/logrhythm
+    owner: root
+    group: eis
+    recurse: yes
+  ignore_errors: true
+  become: true
+  notify: restart scsm
+  tags: change_ownership_opt_logrhythm
+
+...

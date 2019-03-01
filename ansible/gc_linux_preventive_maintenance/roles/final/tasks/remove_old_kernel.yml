@@ -1,0 +1,26 @@
+---
+- block:
+  - name: Identify the number of kernels. 
+    shell: "rpm -q kernel | wc -l"
+    register: existing_kernel
+
+  - debug: var=existing_kernel.stdout_lines 
+
+  - name: Identify the oldest kernel.
+    shell: "rpm -q kernel | head -1"
+    register: oldest_kernel
+
+  - debug: var=oldest_kernel.stdout_lines
+
+  - name: Identify the latest kernel.
+    shell: "rpm -q kernel | tail -1"
+    register: latest_kernel
+
+  - debug: var=latest_kernel.stdout_lines
+
+  - name: Remove oldest kernel.
+    yum:
+      name: "{{ oldest_kernel.stdout_lines }}"
+      state: absent
+    when: (( oldest_kernel.stdout_lines != latest_kernel.stdout_lines ) and ( existing_kernel.stdout >= '3' )) 
+...

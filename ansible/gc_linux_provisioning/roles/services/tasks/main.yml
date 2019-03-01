@@ -1,0 +1,24 @@
+---
+- name: Setup Variables.
+  set_fact:
+    ansible_os_family: "{{ansible_os_family}}"
+    os_major_version: "{{ansible_os_family}}{{ansible_distribution_major_version}}"
+
+- name: Import Services Variables.
+  include_vars: vars/services.yml
+
+- name: Common services
+  service: "name={{ item.key }} enabled={{ item.value[0] }} state={{ item.value[1] }}"
+  with_dict: "{{ services.Common }}" 
+
+- name: Configure RedHat/CentOS specific Services.
+  service: "name={{ item.key }} enabled={{ item.value[0] }} state={{ item.value[1] }}"
+  with_dict: "{{ services[ansible_os_family] | default({}) }}"
+  ignore_errors: true
+
+- name: Configure RedHat/CentOS (6 or 7) specific Services.
+  service: "name={{ item.key }} enabled={{ item.value[0] }} state={{ item.value[1] }}"
+  with_dict: "{{ services[os_major_version] | default({}) }}"
+  ignore_errors: true
+
+...

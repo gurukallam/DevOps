@@ -1,0 +1,41 @@
+---
+- name: List priviledged users. 
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: List priviledged users.
+      shell: "lid -g -n appadmins"
+      register: app_admins
+      become: true
+
+#    - name: Find full name
+#      command: "getent passwd {{ item }}"
+#      with_items: "{{ app_admins.stdout_lines }}"
+#
+#    - name: Find sudo priviledfges. 
+#      command: "sudo -U {{ item }} -l" 
+#      with_items: "{{ app_admins.stdout_lines }}"
+#      become: true
+
+
+#    - name: List all real users on the systems. 
+#      shell: "grep -E '/home.*/bin/bash' /etc/passwd | cut -d: -f1"
+#      register: results
+#
+    - name: Display priviledged users.
+      debug:
+        msg: "System {{ ansible_fqdn}} has the following priviledged users: {{ app_admins.stdout_lines }}." 
+
+#    - name: Display full name of priviledged users. 
+#      command: getent passwd "{{ item }}"
+#      with_items: "{{ results.stdout }}"
+#      with_items: "{{ results.stdout.[0] }}"
+...

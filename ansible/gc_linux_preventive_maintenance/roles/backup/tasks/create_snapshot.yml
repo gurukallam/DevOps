@@ -1,0 +1,47 @@
+---
+- block:
+  - name: Import Sensitive data file.
+    include_vars: "vars/credentials.yml"
+
+  - set_fact:
+      vcenter_server: "phxvc1.domestic.guitarcenter.com"
+      #vcenter_server: "10.160.88.203"
+      vcenter_user: "{{ adm_user }}"
+      vcenter_pass: "{{ adm_user_password }}"
+      #datacenter_name: "WestLakeVillage"
+      datacenter_name: "Phoenix"
+
+#  - name: Find Guest's Folder using name
+#    vmware_guest_find:
+#      hostname: "{{ vcenter_server }}"
+#      username: "{{ vcenter_user }}"
+#      password: "{{ vcenter_pass }}"
+#      validate_certs: False
+#      name: "{{ inventory_hostname }}"
+#    delegate_to: localhost
+#    register: vm_folder
+#
+#  - name: Display Guest's Datacenter
+#    debug: 
+#      msg: "{{ vm_folder.folders[0] }}"
+
+#  - name: Display Guest's Datacenter name. 
+#    debug:
+#      msg:  "{{ vm_folder | from_json }}" 
+
+  - name: Create a snapshot of VM
+    vmware_guest_snapshot:
+      hostname: "{{ vcenter_server }}"
+      username: "{{ vcenter_user }}"
+      password: "{{ vcenter_pass }}"
+      validate_certs: False
+      datacenter: "{{ datacenter_name }}"
+      folder: /"{{ datacenter_name }}"/vm/
+      name: "{{ inventory_hostname }}" 
+      #name: "{{ ansible_hostname }}" 
+      state: present
+      #snapshot_name: Pre-patch snapshot created at "{{ ansible_date_time.date }}"
+      snapshot_name: pre-patch-ansible-generated-1-aniteshl
+      description: Pre-patch snapshot created from Ansible Playbook
+    delegate_to: localhost
+...

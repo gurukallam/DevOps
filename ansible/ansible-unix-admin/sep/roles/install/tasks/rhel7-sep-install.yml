@@ -1,0 +1,104 @@
+---
+- name: Check if SEP is already installed on the host.
+  stat:
+    path: "{{ sep_install_directory }}"
+  register: sep_install_directory
+  become: true
+  tags: check_if_sep_inst_dir_present
+
+- name: Fail if SEP installation directory is already present.
+  fail:
+    msg: "ERROR: SEP installation directory is already present...Exiting."
+  when: sep_install_directory.stat.isdir is defined and sep_install_directory.stat.isdir
+  become: true
+  tags: fail_if_sep_inst_dir_present
+
+- name: Ensure dependencies are present on the host.
+  yum:
+    name={{ item }}
+    state=latest
+  with_items:
+    - gcc.x86_64
+    - gcc-c++
+    - glibc.i686
+    - libgcc.i686
+    - libX11.i686
+  tags: dependencies_check
+  ignore_errors: true
+
+- name: Check create the stage directory "{{ stage_dir }}"
+  file:
+    path: "{{ stage_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+    recurse: yes
+  become: true
+
+- name: Unarchive SEP software to "{{ stage_dir }}"
+  unarchive:
+    src: '{{ sep_archive_file_rhel7 }}'
+    dest: '{{ stage_dir }}'
+  become: true
+  tags: unarchive_software
+
+- name: Make SEP installer executable.
+  file:
+    path: "{{ stage_dir }}/install.sh"
+    mode: 0755
+  tags: make_executable
+
+- name: Run the installer.
+  command: "'{{ stage_dir }}/install.sh' -i"
+  args:
+    chdir: '{{ stage_dir }}/'
+  tags: run_installer
+
+- name: Start SEP smcd service. 
+  service: 
+    name: smcd
+    state: started
+    enabled: yes
+  tags: start_enable_smcd_service
+
+- name: Copy SEP specific config. 
+  copy: 
+    src: "{{ sep_config_file }}" 
+    dest: "{{ sep_install_directory }}/symantec_antivirus"
+    owner: root
+    group: root
+    mode: 0600
+  tags: copy_sep_config 
+
+- name: Import SEP specific config.
+  command: "{{ sep_install_directory }}/symantec_antivirus/sav manage -i sylink.xml"
+  args: 
+    chdir: '{{ sep_install_directory }}/symantec_antivirus/'
+  tags: import_sep_config
+  register: import_result
+
+- debug: var=import_result.stdout
+
+- name: Verify SEP config imported successfully, 
+  fail:
+    msg: "ERROR: SEP config not imported successfully...Exiting."
+  when: import_result.stdout != "Imported successfully."
+
+- name: Check SEP server.  
+  command: "{{ sep_install_directory }}/symantec_antivirus/sav manage -s"
+  register: result
+
+- name: Display SEP server result.
+  debug:
+    msg: "{{result.stdout}}"
+
+- name: Deleting the "{{ stage_dir }}"
+  file:
+    path:  "{{ stage_dir }}"
+    state: absent
+  become: true
+  tags: delete_stage_dir
+  ignore_errors: true
+
+

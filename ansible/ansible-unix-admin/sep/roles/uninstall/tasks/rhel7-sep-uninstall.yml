@@ -1,0 +1,56 @@
+---
+# Uninstall sep from the client servers. 
+
+###############################################################################
+# Stop the service first.
+###############################################################################
+
+- name: Stop the sepclient service on the clients.  
+  service: name=smcd state=stopped
+
+###############################################################################
+# Capture and cleanup any stray processes.
+###############################################################################
+
+- name: Capture any left over running sep process. 
+  shell: "ps -ef | grep -v grep | grep -wi symantec | awk '{print $2}'"
+  register: running_processes
+
+- name: Kill running processes
+  shell: "kill {{ item }}"
+  with_items: "{{ running_processes.stdout_lines }}"
+
+- wait_for:
+    path: "/proc/{{ item }}/status"
+    state: absent
+  with_items: "{{ running_processes.stdout_lines }}"
+  ignore_errors: yes
+  register: killed_processes
+
+- name: Force kill stuck processes
+  shell: "kill -9 {{ item }}"
+  with_items: "{{ killed_processes.results | select('failed') | map(attribute='item') | list }}"
+
+###############################################################################
+# Uninstall the sepclient package.
+###############################################################################
+- name: Uninstall SEP Package
+  yum: 
+    name: sep
+    state: absent
+  tags: remove_sep_package
+  ignore_errors: true
+
+- name: Remove "/etc/Symantec.conf"
+  file: path=/etc/Symantec.conf state=absent
+
+- name: Remove the sep homedirectory.
+  file: path=/opt/Symantec state=absent
+
+- name: Remove the sep binary directory.
+  file: path=/etc/symantec state=absent
+
+- name: Remove the sep logs directory.
+  file: path=/etc/symantec state=absent
+
+...

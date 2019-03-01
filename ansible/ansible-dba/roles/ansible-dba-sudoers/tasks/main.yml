@@ -1,0 +1,12 @@
+---
+- name: Updating "/etc/sudoers.d/10_dba" for dba admins.
+  template:
+    src: templates/10_dba.j2 
+    dest: /etc/sudoers.d/10_dba
+    owner: root
+    group: root
+    mode: 0440
+    backup: yes
+    validate: /usr/sbin/visudo -cf %s
+  tags: update_sudoers_dba_admins
+...

@@ -1,0 +1,9 @@
+oracle.install.responseFileVersion=/oracle/install/rspfmt_clientinstall_response_schema_v12.2.0
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=/opt/oraInventory
+ORACLE_HOME=/opt/oracle/product/12.2.0.1/dbhome_1
+ORACLE_BASE=/opt/oracle
+oracle.install.client.installType=Administrator
+oracle.install.client.customComponents=
+oracle.install.client.schedulerAgentHostName=
+oracle.install.client.schedulerAgentPortNumber=

@@ -1,0 +1,40 @@
+### Oracle aliases and privileges
+Cmnd_Alias      OUI1120 = /apps/oracle/product/11.2.0/dbhome_1/root.sh
+Cmnd_Alias      OUI1020 = /apps/oracle/product/10.2.0/dbhome_1/root.sh
+Cmnd_Alias      AGT10G = /apps/grid/agent10g/root.sh
+Cmnd_Alias      DIAGCOL = /apps/grid/11.2.0/bin/diagcollection.pl
+Cmnd_Alias      GRD0 = /apps/grid/11.2.0/bin/srvctl modify scan -n devcrs01
+Cmnd_Alias      GRD1 = /apps/grid/11.2.0/bin/srvctl modify scan_listener -u
+Cmnd_Alias      GRD2 = /apps/grid/11.2.0/bin/srvctl status scan_listener
+Cmnd_Alias      GRD3 = /apps/grid/11.2.0/bin/srvctl remove scan
+Cmnd_Alias      GRD4 = /apps/grid/11.2.0/bin/srvctl add scan -n devcrs01
+%dba    ALL= /bin/su - oracle, /bin/su - grid, /bin/su - qrdb01oracle, /bin/su - datapal, /bin/su - jobsched, OUI1120, OUI1020, AGT10G, DIAGCOL
+%dba    ALL=(root) GRD0, GRD1, GRD2, GRD3, GRD4
+%dba    ALL=(root) /sbin/service oswatcher start, /sbin/service oswatcher stop
+%dba    ALL=(root) /apps/oracle/product/10.2.0/dbhome_1/root.sh
+%dba    ALL=(root) /apps/grid/agent12c/core/12.1.0.1/root.sh
+%dba    ALL=(root) /bin/tar -cvpf /scratch/homebackup/11203GIdbhome_1dc.tar 11.2.0.3
+%dba    ALL=(root) /apps/oracle/product/OPatch/opatch
+%dba    ALL=(root) /bin/tar -cvpf *
+%dba    ALL=(root) /apps/infra/product/11.2.0.4/dbhome_1/OPatch/opatch*
+%dba    ALL=(root) /apps/infra/product/12.2.0.1/dbhome_1/OPatch/opatch*
+%dba    ALL=(root) /apps/infra/11.2.0.3/bin/diagcollection.sh
+%oinstall       ALL=(root) /apps/infra/11.2.0.3/OPatch/opatch, /apps/oracle/product/11.2.0.3/dbhome_1/OPatch/opatch, /bin/tar -cvpf
+%dba ALL=(root) /usr/bin/cpan*
+%dba    ALL=(root) NOPASSWD: /apps/infra/product/11.2.0.4/dbhome_1/bin/dbfs_client dbfs_user@S_GGTEST /apps/oracle/dbfs_direct/
+%dba    ALL=(root) /apps/infra/product/11.2.0.4/dbhome_1/crs/script/mount-dbfs.sh
+%dba    ALL=(root) /apps/oracle/product/11.2.0.4/dbhome_1/bin/orion -run normal -testname /home/oracle/orionlun -hugenotneeded
+%dba ALL = DVDINSTALLCMDS, DVDUNINSTALLCMDS, INSTALLDIRCMDS, /bin/sh, /usr/bin/Simpana
+%dba    ALL=(root) /scratch/sakthi/TFA/installTFALite
+%dba    ALL=(root) /usr/bin/more /var/log/messages*, /apps/infra/product/12.2.0.1/dbhome_1/bin/crsctl *, /apps/infra/product/12.2.0.1/dbhome_1/rootupgrade.sh, /apps/oracle/product/12.2.0.1/dbhome_1/root.sh
+%dba    ALL=(root) /apps/oracle/product/11.2.0.4/dbhome_1/OPatch/opatch*
+%dba    ALL=(root) /apps/oracle/product/12.2.0.1/dbhome_1/OPatch/opatch*
+
+## Oracle Installation temporary root access
+oracle  ALL=(ALL)       ALL
+grid    ALL=(ALL)       ALL
+
+# Access to nimalarm for jobsched group to allow for DB monitoring customization
+%jobsched       ALL=(root) NOPASSWD: /opt/nimbus/bin/nimalarm *
+
+%obrown ALL=(root) NOPASSWD: /usr/sbin/tcpdump

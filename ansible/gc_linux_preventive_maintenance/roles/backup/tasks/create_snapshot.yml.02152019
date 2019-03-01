@@ -1,0 +1,27 @@
+---
+- block:
+  - name: Import Sensitive data file.
+    include_vars: "vars/credentials.yml"
+
+  - set_fact:
+      vcenter_server: "phxvc1.domestic.guitarcenter.com"
+      #vcenter_server: "10.160.88.203"
+      vcenter_user: "{{ adm_user }}"
+      vcenter_pass: "{{ adm_user_password }}"
+      datacenter_name: "WestLakeVillage"
+
+  - name: Create a snapshot of VM
+    vmware_guest_snapshot:
+      hostname: "{{ vcenter_server }}"
+      username: "{{ vcenter_user }}"
+      password: "{{ vcenter_pass }}"
+      validate_certs: False
+      datacenter: "{{ datacenter_name }}"
+      folder: /"{{ datacenter_name }}"/vm/
+      name: "{{ inventory_hostname }}" 
+      #name: "{{ ansible_hostname }}" 
+      state: present
+      snapshot_name: snap1
+      description: snap1 created from Ansible Playbook
+    delegate_to: localhost
+...

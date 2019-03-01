@@ -1,0 +1,23 @@
+---
+- name: List priviledged users of usa unix group. 
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: List priviledged users.
+      command: lid -g usa
+      register: results
+      become: true
+      ignore_errors: true
+
+    - name: Display priviledged users.
+      debug:
+        msg: "System {{ ansible_fqdn}} has the following priviledged users: {{ results.stdout }}." 
+...

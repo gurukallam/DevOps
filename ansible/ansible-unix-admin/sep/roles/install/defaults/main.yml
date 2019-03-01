@@ -1,0 +1,8 @@
+# variables for sep install.
+stage_dir: '/tmp/stage'
+sep_install_directory: '/opt/Symantec/'
+sep_archive_file_rhel6: roles/install/files/SEP_RHEL6.2_7.2.zip
+#sep_archive_file_rhel7: roles/install/files/SEP_RHEL7.3_PLUS.zip
+#sep_archive_file_rhel7: roles/install/files/SymantecEndpointProtection_14.2.0_Linux.zip
+sep_archive_file_rhel7: roles/install/files/SymantecEndpointProtection.zip
+sep_config_file: roles/install/files/sylink.xml

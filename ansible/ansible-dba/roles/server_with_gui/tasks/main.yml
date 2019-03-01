@@ -1,0 +1,10 @@
+---
+- name: Group install server with qui package
+  include_tasks: "gui.yml"
+
+- name: Set target to graphical target
+  include_tasks: "set_graphical_target.yml" 
+
+- name: Reboot Server
+  include_tasks: "roles/selinux/tasks/reboot_server.yml"
+

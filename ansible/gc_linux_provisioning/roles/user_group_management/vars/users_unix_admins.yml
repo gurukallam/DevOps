@@ -1,0 +1,52 @@
+---
+users_unix_admins:
+  #Byron.Galentine
+  - name: bgalentine
+    uid: 8192
+    group: usa
+    shell: /bin/bash
+    comment: "Byron Galentine - Unix Director"
+
+  #Suresh.Acharya
+  - name: sacharya
+    uid: 8185
+    group: usa
+    shell: /bin/bash
+    comment: "Suresh Acharya - Unix Administrator"
+
+  #Jumaane.Salim
+  - name: jsalim
+    uid: 9042
+    group: usa
+    shell: /bin/bash
+    comment: "Jumaane Salim - Unix Administrator"
+
+  #Marcia.Weedman
+  - name: mweedman
+    uid: 9069
+    group: usa
+    shell: /bin/bash
+    comment: "Marcia Weedman - Unix Administrator"
+
+  #Anitesh.Lal
+  - name: aniteshl
+    uid: 100001
+    group: usa
+    shell: /bin/bash
+    password: $6$CAJzI.p/rrDS2BBX$xueODgVJKknNcOgBna7ELFIbv3LiYcwXUrtV5YWDpJ6UVz3JWPQ2rwsb9jbrIMaIyJnfSYBCrNXNapMBuA0nB0
+    comment: "Anitesh Lal - Unix Administrator"
+
+  #Prithviraj.Jathan
+  - name: pjathan
+    uid: 10002
+    group: usa
+    shell: /bin/bash
+    password: $6$4xWLh5b87t9QOTvn$5L99kSqtplBov4ADtBU9d7Gla2jI8zALJ1GrOxUxINdx0KRjzrPnAiZfNcfbf84Zc2ARKM8lyjUDtBQfWbA.B.
+    comment: "Prithviraj Jathan - Manager, IT Infrastructure"
+
+#  - {name: bgalentine, uid: 8192, group: usa, shell: /bin/bash, comment: 'Byron Galentine - Unix Director'}
+#  - {name: sacharya, uid: 8185, group: usa, shell: /bin/bash, comment: 'Suresh Acharya - Unix Administrator'}
+#  - {name: jsalim, uid: 9042, group: usa, shell: /bin/bash, comment: 'Jumaane Salim - Unix Administrator'}
+#  - {name: mweedman, uid: 9069, group: usa, shell: /bin/bash, comment: 'Marcia Weedman - Unix Administrator'}
+#  - {name: aniteshl, uid: 100001, password: $6$CAJzI.p/rrDS2BBX$xueODgVJKknNcOgBna7ELFIbv3LiYcwXUrtV5YWDpJ6UVz3JWPQ2rwsb9jbrIMaIyJnfSYBCrNXNapMBuA0nB0, group: usa, shell: /bin/bash, comment: 'Anitesh Lal - Unix Administrator'}
+#  - {name: pjathan, uid: 10002, password: $6$4xWLh5b87t9QOTvn$5L99kSqtplBov4ADtBU9d7Gla2jI8zALJ1GrOxUxINdx0KRjzrPnAiZfNcfbf84Zc2ARKM8lyjUDtBQfWbA.B., group: usa, shell: /bin/bash, comment: 'Prithviraj Jathan - Manager, IT Infrastructure'}

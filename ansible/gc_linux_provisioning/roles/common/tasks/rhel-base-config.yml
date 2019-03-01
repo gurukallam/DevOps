@@ -1,0 +1,59 @@
+---
+- name: Copy "krb.conf" to "/etc/krb5.conf".
+  copy:
+    src: files/krb5.conf
+    dest: /etc/krb5.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copy "nsswitch.conf" to "/etc/nsswitch.conf"
+  copy: 
+    src: files/nsswitch.conf
+    dest: /etc/nsswitch.conf
+    owner: root
+    group: root
+    mode: 0644
+
+
+- name: Creating group for svcqualys service account. 
+  group: 
+    name: eis
+    gid: 9031
+    state: present
+
+- name: Creating svcqualys service account user. 
+  user: 
+    name: svcqualys
+    uid: 9999
+    group: eis
+    state: present
+    comment: "svcQualys - EIS Team"
+    home: /home/svcqualys
+    shell: /bin/bash
+
+- name: Creating group for pamsvc service account.
+  group: 
+    name: pamsvc
+    gid: 9995
+    state: present
+
+- name: Creating pamsvc service account user.
+  user:
+    name: pamsvc
+    uid: 9995
+    group: pamsvc
+    groups: eis
+    state: present
+    comment: "PAM service account - EIS Team"
+    home: /home/pamsvc
+    shell: /bin/bash
+#- name: Log completion of rhel-base-config.yml to ansible_install.log
+#  lineinfile:
+#    path: /var/log/ansible_install.log
+#    state: present
+#    create: yes
+#    insertafter: EOF
+#    line: "rhel-base-config.yml applied successfully {{lookup('pipe','date +%Y/%m/%d--%H:%M%Z')}}"
+
+...

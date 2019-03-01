@@ -1,0 +1,33 @@
+---
+- name: Replacing /etc/sudoers for sys admins.
+  template:
+    src: templates/sudoers.j2
+    dest: /etc/sudoers
+    owner: root
+    group: root
+    mode: 0440
+    backup: yes
+    validate: /usr/sbin/visudo -cf %s
+  tags: update_sudoers_sys_admins
+
+- name: Updating "/etc/sudoers.d/10_eis" for eis admins.
+  template:
+    src: templates/10_eis.j2
+    dest: /etc/sudoers.d/10_eis
+    owner: root
+    group: root
+    mode: 0440
+    backup: yes
+    validate: /usr/sbin/visudo -cf %s
+  tags: update_sudoers_eis_admins
+
+- name: Updating "/etc/sudoers.d/10_pamsvc" for PAM Service Account.
+  template:
+    src: templates/10_pamsvc.j2
+    dest: /etc/sudoers.d/10_pamsvc
+    owner: root
+    group: root
+    mode: 0440
+    backup: yes
+    validate: /usr/sbin/visudo -cf %s
+  tags: update_sudoers_pamsvc

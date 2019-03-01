@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ServerSettings DomainId="3E7DBCE00AC0D7160E0B8CF286E31374" NameSpace="rpc">
+  <CommConf>
+    <AgentCommunicationSetting AllowClientUploadCriticalEventImmediately="1" AlwaysConnect="1" CommunicationMode="PULL" DisableDownloadProfile="0" Kcs="D1EEFC77EE68BF91A76448EBDF0D27EC" PullHeartbeatSeconds="1800" RandomizationEnabled="1" RandomizationRange="1800" RememberCurrentGroup="0" RememberCurrentPolicyMode="1" UploadCmdStateHeartbeatSeconds="1800" UploadLearnedApp="0" UploadLogHeartbeatSeconds="1800" UploadOpStateHeartbeatSeconds="1800"/>
+    <ServerList Name="Port 8014">
+      <ServerPriorityBlock Name="Priority1">
+        <Server Address="10.192.215.22" HttpPort="8014" HttpsVerifyCA="0" VerifySignatures="1"/>
+      </ServerPriorityBlock>
+    </ServerList>
+    <ServerCertList>
+      <Certificate Name="SYM-MGT-002-WP">-----BEGIN CERTIFICATE-----
+MIIEKzCCAxOgAwIBAgIQQr7osEPd0EtgLbLots/bjzANBgkqhkiG9w0BAQsFADCBiTGBhjAJBgNV&#13;
+BAYTAlVTMAkGA1UECAwCQ0EwCgYDVQQLDANFU0cwFAYDVQQHDA1Nb3VudGFpbiBWaWV3MBsGA1UE&#13;
+CgwUU3ltYW50ZWMgQ29ycG9yYXRpb24wLwYDVQQDDChTWU0tTUdULTAwMi1XUC5kb21lc3RpYy5n&#13;
+dWl0YXJjZW50ZXIuY29tMB4XDTE3MDUwNjE3Mzg0OFoXDTI3MDYwMzE3Mzg0OFowgYkxgYYwCQYD&#13;
+VQQGEwJVUzAJBgNVBAgMAkNBMAoGA1UECwwDRVNHMBQGA1UEBwwNTW91bnRhaW4gVmlldzAbBgNV&#13;
+BAoMFFN5bWFudGVjIENvcnBvcmF0aW9uMC8GA1UEAwwoU1lNLU1HVC0wMDItV1AuZG9tZXN0aWMu&#13;
+Z3VpdGFyY2VudGVyLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOuV/IBo/WWU&#13;
+3ICTrwzHV/eOgKZk3mOiO4EpOpom3eygEE3SSb5mY1w2ZvbmqH1/rxlIz/pO5l13f7KZTUwTG3UL&#13;
+jy6Z8MNelZNiDIVNj+dsm5brApbXMx0iQdXLOy9+UdJXejFUGbuR3o6c2Sxp0u1slDgWZ6UKw2aT&#13;
+2CU7mIyhgoVR3XDxNPXEKcPQ5Z3AcJUVgShxzkISZWA8M5c0YyIdOhhxmvwnU40sN7q61AZUUnzD&#13;
+I03Ek8jFew9MFvq9+WAiWgMdLLUla/FJWcxeQaMbFXx4KiJpV/KM/tekHI0NxTSyPV7XCn+EzFhJ&#13;
+BmvCtyvPiSWHlLBdotCzCw9IjF8CAwEAAaOBjDCBiTCBhgYDVR0RBH8wfYIoU1lNLU1HVC0wMDIt&#13;
+V1AuZG9tZXN0aWMuZ3VpdGFyY2VudGVyLmNvbYIOU1lNLU1HVC0wMDItV1CHBArA1xaCDTEwLjE5&#13;
+Mi4yMTUuMjKHEP6AAAAAAAAAAABe/grA1xaCGmZlODA6MDowOjA6MDo1ZWZlOmFjMDpkNzE2MA0G&#13;
+CSqGSIb3DQEBCwUAA4IBAQBI/AZ2D4d6a6sQv5YCxkKaTO0kWpxM1En/yEHDYfT7wCqouapNpMwc&#13;
+Lagwn5Qo/5Fc43vFXcc8jNn1DZOKhH7n3YTJXISYQ18KghpbyjWWNQMiKPCQril/EJ7OKO7JH67l&#13;
+DlblADNN7FNCUi53bCjEHHR36aeQ7OUryjMZeL/X1yF+4oY/Slm32Pc4SXkNE3l0pU0bSA/1OwZd&#13;
+IO07jbXyZGA6jEUSXBLEFahJXLFa1sjMH1p/SAPsaYh3lM7T6kU0qxN4ZvL//8wjKiy2DW2ye9jH&#13;
+qBh+nQ8zdquZH7O0Clug5eA7V0DHspUx86NaxAjNgtjTqqAB8c57If2Gbs/j&#13;
+-----END CERTIFICATE-----</Certificate>
+    </ServerCertList>
+    <LogSetting MaxLogRecords="100" SendingLogAllowed="1" UploadProcessLog="1" UploadRawLog="1" UploadSecurityLog="1" UploadSystemLog="1" UploadTrafficLog="1"/>
+    <RegisterClient PreferredGroup="My Company\Servers\Linux Servers" PreferredMode="1"/>
+  </CommConf>
+</ServerSettings>
