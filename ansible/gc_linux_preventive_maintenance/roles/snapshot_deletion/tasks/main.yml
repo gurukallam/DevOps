@@ -1,0 +1,3 @@
+---
+- name: Create a snapshot if 'VMware Virtual Platform'.  
+  include_tasks: "delete_snapshot.yml"

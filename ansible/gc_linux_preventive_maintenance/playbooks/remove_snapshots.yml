@@ -1,0 +1,14 @@
+---
+- name: Remove all snapshots of a VM
+  hosts:  "{{ override_hosts | default('all') }}"
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  roles:
+    - /home/aniteshl/ansible/gc_linux_preventive_maintenance/roles/snapshot_deletion 
+...
