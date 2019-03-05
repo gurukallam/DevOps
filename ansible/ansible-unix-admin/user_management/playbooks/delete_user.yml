@@ -12,8 +12,7 @@
 
   vars:
     user_name_or_names:
-      - bgilbert
-      - scurtis 
+      - mtracy
 
   tasks:
     - name: Delete "{{ user_name_or_names }}" from the UNIX systems.
