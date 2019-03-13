@@ -1,6 +1,7 @@
 ---
 - name: Check if java is installed
   hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
   become_method: sudo
   become_user: root
   become: true
@@ -11,22 +12,40 @@
  
   tasks:
     - name: Check if java is installed.
-      command: java -version
+      shell: "rpm -qa | grep -i jdk"
       register: java_result
       ignore_errors: true
 
-    - debug:
-        msg: "Failed - Java is not installed"
-      when: java_result is failed
+    - name: Check if java is installed.
+      debug:
+        msg: "On system: {{ ansible_fqdn}}, java is installed: {{ java_result.stdout_lines }}."
 
-    - debug:
-        msg: "Success - Java is installed on {{ ansible_fqdn }}"
-      when:  java_result is success
+    - name: Gather active java version 
+      shell: "java -version"
+      register: active_java_version
 
-    - debug:
-        msg: "OpenJdk is installed on {{ ansible_fqdn }}"
-      when: "'openjdk' or 'OpenJDK' in java_result.stdout_lines"
-      ignore_errors: true
+    - name: Check active java version.
+      debug: var=active_java_version
+       
+    - name: Get Java version
+      shell: java -version |& awk -F'"' '{print $2}'
+      register: java_version
+
+    - debug: 
+        msg:  "On system: {{ ansible_fqdn}}, the active java version is: {{ java_version.stdout_lines }}"
+
+#    - debug:
+#        msg: "Failed - Java is not installed"
+#      when: java_result is failed
+#
+#    - debug:
+#        msg: "Success - Java is installed on {{ ansible_fqdn }}"
+#      when:  java_result is success
+#
+#    - debug:
+#        msg: "OpenJdk is installed on {{ ansible_fqdn }}"
+#      when: "'openjdk' or 'OpenJDK' in java_result.stdout_lines"
+#      ignore_errors: true
 
 #    - debug:
 #        msg: "Oracle Java is installed on {{ ansible_fqdn }}"

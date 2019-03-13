@@ -1,11 +1,14 @@
 ---
-- name: Subscribing the RHEL 6 server to Satellite 6.2. 
-  command: /usr/bin/subscription-manager --force register --activationkey="vdc_activation_key" --org="Guitar_Center_Inc_" 
-  args: 
-    chdir: /usr/bin/
+- name: Subscribing the RHEL 6 server to Satellite 6.2.
+  redhat_subscription:
+    activationkey: vdc_activation_key
+    org_id: Guitar_Center_Inc_
+    force_register: yes
+    state: present
+    pool: '^(Red Hat Enterprise Server|Red Hat Virtualization)$'
 
 - name: Enable all the following required repositories the RHEL 6 server. 
-  command: /usr/bin/subscription-manager repos --enable=rhel-6-server-rpms --enable=rhel-6-server-rhn-tools-rpms --enable=rhel-6-server-rh-common-rpms --enable=rhel-6-server-satellite-tools-6.2-rpms
+  command: /usr/bin/subscription-manager repos --enable=rhel-6-server-rpms --enable=rhel-6-server-rhn-tools-rpms --enable=rhel-6-server-rh-common-rpms --enable=rhel-6-server-satellite-tools-6.2-rpms --enable=rhel-6-server-optional-rpms
   args: 
     chdir: /usr/bin/
  

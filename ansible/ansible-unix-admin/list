@@ -1,0 +1,1044 @@
+2019-03-12 15:41:07,286 p=122711 u=aniteshl |  ok: [inf-awx-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-awx-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:07,287 p=122711 u=aniteshl |  ok: [123-psi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: 123-psi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:07,379 p=122711 u=aniteshl |  ok: [123-psi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: 123-psi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:07,551 p=122711 u=aniteshl |  ok: [123-psi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: 123-psi-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:07,622 p=122711 u=aniteshl |  ok: [arc-cnf-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: arc-cnf-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:07,703 p=122711 u=aniteshl |  ok: [arc-dev-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: arc-dev-001-ld.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:07,778 p=122711 u=aniteshl |  ok: [arc-elk-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ARC-ELK-001-LP.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:07,850 p=122711 u=aniteshl |  ok: [arc-elk-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ARC-ELK-002-LP.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:07,939 p=122711 u=aniteshl |  ok: [arc-elk-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ARC-ELK-003-LP.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:07,940 p=122711 u=aniteshl |  ok: [arc-elk-004-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ARC-ELK-004-LP.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:08,029 p=122711 u=aniteshl |  ok: [atg-bcc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bcc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,214 p=122711 u=aniteshl |  ok: [atg-bcc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bcc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,215 p=122711 u=aniteshl |  ok: [atg-bcc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bcc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,401 p=122711 u=aniteshl |  ok: [atg-bld-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bld-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,402 p=122711 u=aniteshl |  ok: [atg-bld-001-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bld-001-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,492 p=122711 u=aniteshl |  ok: [atg-blm-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-blm-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,580 p=122711 u=aniteshl |  ok: [atg-bsi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bsi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,665 p=122711 u=aniteshl |  ok: [atg-bsi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bsi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,750 p=122711 u=aniteshl |  ok: [atg-bsi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bsi-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,835 p=122711 u=aniteshl |  ok: [atg-bsi-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-bsi-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:08,919 p=122711 u=aniteshl |  ok: [atg-ccc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,002 p=122711 u=aniteshl |  ok: [atg-ccc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,163 p=122711 u=aniteshl |  ok: [atg-ccc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,164 p=122711 u=aniteshl |  ok: [atg-ccs-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccs-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,335 p=122711 u=aniteshl |  ok: [atg-ccs-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccs-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,336 p=122711 u=aniteshl |  ok: [atg-ccs-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ccs-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,427 p=122711 u=aniteshl |  ok: [atg-dyn-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-dyn-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,510 p=122711 u=aniteshl |  ok: [atg-ewb-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ewb-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,593 p=122711 u=aniteshl |  ok: [atg-ewb-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ewb-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,684 p=122711 u=aniteshl |  ok: [atg-ewb-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-ewb-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,772 p=122711 u=aniteshl |  ok: [atg-gss-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-gss-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,864 p=122711 u=aniteshl |  ok: [atg-gss-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-gss-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:09,953 p=122711 u=aniteshl |  ok: [atg-gss-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-gss-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,037 p=122711 u=aniteshl |  ok: [atg-idx-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-idx-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,124 p=122711 u=aniteshl |  ok: [atg-idx-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-idx-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,211 p=122711 u=aniteshl |  ok: [atg-idx-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-idx-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,298 p=122711 u=aniteshl |  ok: [atg-log-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-log-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,383 p=122711 u=aniteshl |  ok: [atg-mdx-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-mdx-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,519 p=122711 u=aniteshl |  ok: [atg-mdx-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-mdx-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,622 p=122711 u=aniteshl |  ok: [atg-prs-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-prs-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,623 p=122711 u=aniteshl |  ok: [atg-prs-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-prs-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,714 p=122711 u=aniteshl |  ok: [atg-psi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,806 p=122711 u=aniteshl |  ok: [atg-psi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,896 p=122711 u=aniteshl |  ok: [atg-psi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:10,981 p=122711 u=aniteshl |  ok: [atg-psi-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,065 p=122711 u=aniteshl |  ok: [atg-psi-005-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-005-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,151 p=122711 u=aniteshl |  ok: [atg-psi-006-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-006-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,248 p=122711 u=aniteshl |  ok: [atg-psi-007-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-007-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,333 p=122711 u=aniteshl |  ok: [atg-psi-008-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-008-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,420 p=122711 u=aniteshl |  ok: [atg-psi-009-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-009-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,508 p=122711 u=aniteshl |  ok: [atg-psi-010-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-010-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,593 p=122711 u=aniteshl |  ok: [atg-psi-011-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-011-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,692 p=122711 u=aniteshl |  ok: [atg-psi-012-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-012-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,781 p=122711 u=aniteshl |  ok: [atg-psi-013-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-013-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,870 p=122711 u=aniteshl |  ok: [atg-psi-014-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-014-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:11,958 p=122711 u=aniteshl |  ok: [atg-psi-015-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-015-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,045 p=122711 u=aniteshl |  ok: [atg-psi-016-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-016-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,131 p=122711 u=aniteshl |  ok: [atg-psi-017-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-017-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,218 p=122711 u=aniteshl |  ok: [atg-psi-018-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-018-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,304 p=122711 u=aniteshl |  ok: [atg-psi-019-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-019-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,390 p=122711 u=aniteshl |  ok: [atg-psi-020-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-020-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,475 p=122711 u=aniteshl |  ok: [atg-psi-021-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-021-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,560 p=122711 u=aniteshl |  ok: [atg-psi-022-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-022-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,646 p=122711 u=aniteshl |  ok: [atg-psi-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,738 p=122711 u=aniteshl |  ok: [atg-psi-102-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-102-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,822 p=122711 u=aniteshl |  ok: [atg-psi-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:12,915 p=122711 u=aniteshl |  ok: [atg-psi-202-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-psi-202-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,001 p=122711 u=aniteshl |  ok: [atg-qas-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-qas-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,085 p=122711 u=aniteshl |  ok: [atg-slm-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-slm-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,169 p=122711 u=aniteshl |  ok: [atg-slm-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-slm-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,254 p=122711 u=aniteshl |  ok: [atg-slm-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-slm-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,339 p=122711 u=aniteshl |  ok: [atg-stg-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-stg-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,425 p=122711 u=aniteshl |  ok: [atg-stg-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-stg-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,518 p=122711 u=aniteshl |  ok: [atg-stg-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-stg-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,602 p=122711 u=aniteshl |  ok: [atg-svc-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,697 p=122711 u=aniteshl |  ok: [atg-svc-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,783 p=122711 u=aniteshl |  ok: [atg-svc-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,867 p=122711 u=aniteshl |  ok: [atg-svc-102-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-102-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:13,952 p=122711 u=aniteshl |  ok: [atg-svc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,041 p=122711 u=aniteshl |  ok: [atg-svc-202-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-svc-202-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,129 p=122711 u=aniteshl |  ok: [atg-utl-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-utl-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,221 p=122711 u=aniteshl |  ok: [atg-utl-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-utl-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,306 p=122711 u=aniteshl |  ok: [atg-utl-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-utl-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,390 p=122711 u=aniteshl |  ok: [atg-utl-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-utl-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,478 p=122711 u=aniteshl |  ok: [atg-wdc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,566 p=122711 u=aniteshl |  ok: [atg-wdc-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,651 p=122711 u=aniteshl |  ok: [atg-wdc-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,741 p=122711 u=aniteshl |  ok: [atg-wdc-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,830 p=122711 u=aniteshl |  ok: [atg-wdc-005-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-005-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:14,915 p=122711 u=aniteshl |  ok: [atg-wdc-006-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-006-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,004 p=122711 u=aniteshl |  ok: [atg-wdc-007-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-007-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,088 p=122711 u=aniteshl |  ok: [atg-wdc-008-lp.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-008-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,172 p=122711 u=aniteshl |  ok: [atg-wdc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,256 p=122711 u=aniteshl |  ok: [atg-wdc-102-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-102-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,344 p=122711 u=aniteshl |  ok: [atg-wdc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,478 p=122711 u=aniteshl |  ok: [atg-wdc-202-lq.mf.guitarcenter.com] => {
+    "msg": "On system: atg-wdc-202-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,548 p=122711 u=aniteshl |  ok: [b2b-brt-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: b2b-brt-001-ld.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:15,549 p=122711 u=aniteshl |  ok: [b2b-brt-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: b2b-brt-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:15,692 p=122711 u=aniteshl |  ok: [b2b-brt-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: b2b-brt-002-lp.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:15,693 p=122711 u=aniteshl |  ok: [b2b-web-001-lp.guitarcenter.com] => {
+    "msg": "On system: b2b-web-001-lp.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:15,861 p=122711 u=aniteshl |  ok: [bit-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: bit-app-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,862 p=122711 u=aniteshl |  ok: [boo-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: boo-app-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:15,943 p=122711 u=aniteshl |  ok: [cms-app-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-app-001-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,022 p=122711 u=aniteshl |  ok: [cms-app-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: cms-app-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,101 p=122711 u=aniteshl |  ok: [cms-app-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-app-002-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,187 p=122711 u=aniteshl |  ok: [cms-app-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: cms-app-002-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,268 p=122711 u=aniteshl |  ok: [cms-app-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-app-003-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,351 p=122711 u=aniteshl |  ok: [cms-mys-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-mys-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:16,435 p=122711 u=aniteshl |  ok: [cms-mys-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: cms-mys-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:16,519 p=122711 u=aniteshl |  ok: [cms-web-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-web-001-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,616 p=122711 u=aniteshl |  ok: [cms-web-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: cms-web-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,700 p=122711 u=aniteshl |  ok: [cms-web-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-web-002-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,784 p=122711 u=aniteshl |  ok: [cms-web-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: cms-web-002-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,946 p=122711 u=aniteshl |  ok: [cms-web-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: cms-web-003-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:16,947 p=122711 u=aniteshl |  ok: [csm-jss-001-lp.distortedriffs.com] => {
+    "msg": "On system: csm-jss-001-lp.distortedriffs.com, java is installed: [u'copy-jdk-configs-3.3-2.el7.noarch', u'java-1.8.0-openjdk-headless-1.8.0.161-2.b14.el7.x86_64', u'java-1.8.0-openjdk-1.8.0.161-2.b14.el7.x86_64']."
+}
+2019-03-12 15:41:17,028 p=122711 u=aniteshl |  ok: [csp-jds-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jds-001-ld.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:17,110 p=122711 u=aniteshl |  ok: [csp-jds-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jds-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:17,194 p=122711 u=aniteshl |  ok: [csp-jds-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jds-003-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:17,275 p=122711 u=aniteshl |  ok: [csp-jds-004-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jds-004-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:17,354 p=122711 u=aniteshl |  ok: [csp-jss-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jss-001-ld.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.7.0-openjdk-1.7.0.201-2.6.16.0.el6_10.x86_64', u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.8.0-openjdk-devel-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.7.0-openjdk-devel-1.7.0.201-2.6.16.0.el6_10.x86_64']."
+}
+2019-03-12 15:41:17,524 p=122711 u=aniteshl |  ok: [csp-jss-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-jss-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-devel-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:17,525 p=122711 u=aniteshl |  ok: [csp-mys-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-mys-001-ld.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.201-2.6.16.0.el6_10.x86_64', u'java-1.7.0-openjdk-devel-1.7.0.201-2.6.16.0.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch']."
+}
+2019-03-12 15:41:17,604 p=122711 u=aniteshl |  ok: [csp-mys-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: csp-mys-001-lp.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.7.0-openjdk-1.7.0.201-2.6.16.0.el6_10.x86_64', u'java-1.7.0-openjdk-devel-1.7.0.201-2.6.16.0.el6_10.x86_64']."
+}
+2019-03-12 15:41:17,686 p=122711 u=aniteshl |  ok: [cus-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: cus-app-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.7.0_65-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.201.b09-1.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.201.b09-1.el6_10.x86_64']."
+}
+2019-03-12 15:41:17,843 p=122711 u=aniteshl |  ok: [cus-msq-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: cus-msq-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:17,844 p=122711 u=aniteshl |  ok: [ecm-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:17,924 p=122711 u=aniteshl |  ok: [ecm-app-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:17,999 p=122711 u=aniteshl |  ok: [ecm-app-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-002-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,082 p=122711 u=aniteshl |  ok: [ecm-app-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-002-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,157 p=122711 u=aniteshl |  ok: [ecm-app-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-003-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,301 p=122711 u=aniteshl |  ok: [ecm-app-003-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ecm-app-003-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,302 p=122711 u=aniteshl |  ok: [grd-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: grd-app-001-lp.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:18,441 p=122711 u=aniteshl |  ok: [grd-app-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: grd-app-001-lq.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:18,442 p=122711 u=aniteshl |  ok: [grd-app-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: grd-app-002-lq.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:18,590 p=122711 u=aniteshl |  ok: [grd-app-004-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: grd-app-004-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:18,591 p=122711 u=aniteshl |  ok: [grd-app-005-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: grd-app-005-lp.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:18,723 p=122711 u=aniteshl |  ok: [inb-web-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: inb-web-001-ld.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,794 p=122711 u=aniteshl |  ok: [inf-ans-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: INF-ANS-001-LP.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,862 p=122711 u=aniteshl |  ok: [inf-ans-001-lr.domestic.guitarcenter.com] => {
+    "msg": "On system: INF-ANS-001-LR.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,946 p=122711 u=aniteshl |  ok: [inf-ans-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: INF-ANS-002-LP.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:18,947 p=122711 u=aniteshl |  ok: [inf-ans-002-lr.domestic.guitarcenter.com] => {
+    "msg": "On system: INF-ANS-002-LR.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.x86_64']."
+}
+2019-03-12 15:41:19,117 p=122711 u=aniteshl |  ok: [inf-esftp-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-esftp-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,118 p=122711 u=aniteshl |  ok: [inf-ftp-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-ftp-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,198 p=122711 u=aniteshl |  ok: [inf-ftp-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-ftp-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,279 p=122711 u=aniteshl |  ok: [inf-ftp-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-ftp-002-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,360 p=122711 u=aniteshl |  ok: [inf-isftp-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-isftp-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,437 p=122711 u=aniteshl |  ok: [inf-mys-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-mys-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,520 p=122711 u=aniteshl |  ok: [inf-mys-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-mys-003-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,659 p=122711 u=aniteshl |  ok: [inf-mys-005-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-mys-005-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,661 p=122711 u=aniteshl |  ok: [inf-mys-009-lp.distortedriffs.com] => {
+    "msg": "On system: inf-mys-009-lp.distortedriffs.com, java is installed: []."
+}
+2019-03-12 15:41:19,811 p=122711 u=aniteshl |  ok: [inf-nbr-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-nbr-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,812 p=122711 u=aniteshl |  ok: [inf-nbr-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-nbr-002-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:19,960 p=122711 u=aniteshl |  ok: [inf-rl7-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-rl7-001-ld.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:19,961 p=122711 u=aniteshl |  ok: [inf-sql-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-sql-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.201.b09-2.el7_6.x86_64', u'java-1.8.0-openjdk-1.8.0.201.b09-2.el7_6.x86_64', u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:20,125 p=122711 u=aniteshl |  ok: [inf-ssh-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-ssh-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,127 p=122711 u=aniteshl |  ok: [inf-ssh-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: inf-ssh-003-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,222 p=122711 u=aniteshl |  ok: [jir-app-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: jir-app-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,314 p=122711 u=aniteshl |  ok: [mfi-bcc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bcc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,401 p=122711 u=aniteshl |  ok: [mfi-bcc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bcc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,492 p=122711 u=aniteshl |  ok: [mfi-bcc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bcc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,581 p=122711 u=aniteshl |  ok: [mfi-bld-001-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bld-001-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,670 p=122711 u=aniteshl |  ok: [mfi-blm-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-blm-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,757 p=122711 u=aniteshl |  ok: [mfi-bsi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bsi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,843 p=122711 u=aniteshl |  ok: [mfi-bsi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bsi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:20,938 p=122711 u=aniteshl |  ok: [mfi-bsi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bsi-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,023 p=122711 u=aniteshl |  ok: [mfi-bsi-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-bsi-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,116 p=122711 u=aniteshl |  ok: [mfi-ccc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ccc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,203 p=122711 u=aniteshl |  ok: [mfi-ccc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ccc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,289 p=122711 u=aniteshl |  ok: [mfi-ccc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ccc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,376 p=122711 u=aniteshl |  ok: [mfi-ewb-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ewb-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,462 p=122711 u=aniteshl |  ok: [mfi-ewb-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ewb-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,554 p=122711 u=aniteshl |  ok: [mfi-ewb-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-ewb-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,640 p=122711 u=aniteshl |  ok: [mfi-gss-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-gss-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,727 p=122711 u=aniteshl |  ok: [mfi-gss-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-gss-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:21,813 p=122711 u=aniteshl |  ok: [mfi-gss-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-gss-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:22,504 p=122711 u=aniteshl |  ok: [mfi-idx-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-idx-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:22,787 p=122711 u=aniteshl |  ok: [mfi-idx-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-idx-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:22,788 p=122711 u=aniteshl |  ok: [mfi-idx-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-idx-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:22,991 p=122711 u=aniteshl |  ok: [mfi-idx-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-idx-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:23,341 p=122711 u=aniteshl |  ok: [mfi-mdx-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-mdx-001-lp.mf.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:24,081 p=122711 u=aniteshl |  ok: [mfi-mdx-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-mdx-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,849 p=122711 u=aniteshl |  ok: [mfi-mdx-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-mdx-002-lp.mf.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:24,851 p=122711 u=aniteshl |  ok: [mfi-mdx-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-mdx-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,852 p=122711 u=aniteshl |  ok: [mfi-psi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,852 p=122711 u=aniteshl |  ok: [mfi-psi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,853 p=122711 u=aniteshl |  ok: [mfi-psi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,854 p=122711 u=aniteshl |  ok: [mfi-psi-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,855 p=122711 u=aniteshl |  ok: [mfi-psi-006-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-006-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,856 p=122711 u=aniteshl |  ok: [mfi-psi-005-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-005-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,857 p=122711 u=aniteshl |  ok: [mfi-psi-007-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-007-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:24,945 p=122711 u=aniteshl |  ok: [mfi-psi-008-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-008-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,034 p=122711 u=aniteshl |  ok: [mfi-psi-009-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-009-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,122 p=122711 u=aniteshl |  ok: [mfi-psi-010-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-010-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,210 p=122711 u=aniteshl |  ok: [mfi-psi-011-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-011-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,300 p=122711 u=aniteshl |  ok: [mfi-psi-012-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-012-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,390 p=122711 u=aniteshl |  ok: [mfi-psi-013-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-013-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,476 p=122711 u=aniteshl |  ok: [mfi-psi-014-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-014-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,565 p=122711 u=aniteshl |  ok: [mfi-psi-015-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-015-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,651 p=122711 u=aniteshl |  ok: [mfi-psi-016-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-016-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,737 p=122711 u=aniteshl |  ok: [mfi-psi-017-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-017-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,831 p=122711 u=aniteshl |  ok: [mfi-psi-018-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-018-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:25,918 p=122711 u=aniteshl |  ok: [mfi-psi-019-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-019-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,007 p=122711 u=aniteshl |  ok: [mfi-psi-020-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-020-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,093 p=122711 u=aniteshl |  ok: [mfi-psi-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,180 p=122711 u=aniteshl |  ok: [mfi-psi-102-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-102-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,267 p=122711 u=aniteshl |  ok: [mfi-psi-103-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-103-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,354 p=122711 u=aniteshl |  ok: [mfi-psi-104-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-104-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,440 p=122711 u=aniteshl |  ok: [mfi-psi-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,527 p=122711 u=aniteshl |  ok: [mfi-psi-202-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-202-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,612 p=122711 u=aniteshl |  ok: [mfi-psi-203-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-203-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,700 p=122711 u=aniteshl |  ok: [mfi-psi-204-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-psi-204-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,879 p=122711 u=aniteshl |  ok: [mfi-slm-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-slm-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,880 p=122711 u=aniteshl |  ok: [mfi-slm-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-slm-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:26,966 p=122711 u=aniteshl |  ok: [mfi-slm-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-slm-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,051 p=122711 u=aniteshl |  ok: [mfi-stg-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-stg-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,136 p=122711 u=aniteshl |  ok: [mfi-stg-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-stg-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,222 p=122711 u=aniteshl |  ok: [mfi-stg-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-stg-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,310 p=122711 u=aniteshl |  ok: [mfi-svc-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-svc-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,400 p=122711 u=aniteshl |  ok: [mfi-svc-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-svc-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,487 p=122711 u=aniteshl |  ok: [mfi-utl-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-utl-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,574 p=122711 u=aniteshl |  ok: [mfi-utl-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-utl-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,661 p=122711 u=aniteshl |  ok: [mfi-utl-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-utl-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,746 p=122711 u=aniteshl |  ok: [mfi-utl-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-utl-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,830 p=122711 u=aniteshl |  ok: [mfi-wdc-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:27,921 p=122711 u=aniteshl |  ok: [mfi-wdc-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,010 p=122711 u=aniteshl |  ok: [mfi-wdc-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-003-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,093 p=122711 u=aniteshl |  ok: [mfi-wdc-004-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-004-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,177 p=122711 u=aniteshl |  ok: [mfi-wdc-005-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-005-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,260 p=122711 u=aniteshl |  ok: [mfi-wdc-006-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-006-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,344 p=122711 u=aniteshl |  ok: [mfi-wdc-007-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-007-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,430 p=122711 u=aniteshl |  ok: [mfi-wdc-008-lp.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-008-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,515 p=122711 u=aniteshl |  ok: [mfi-wdc-101-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-101-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,600 p=122711 u=aniteshl |  ok: [mfi-wdc-102-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-102-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,685 p=122711 u=aniteshl |  ok: [mfi-wdc-201-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-201-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,765 p=122711 u=aniteshl |  ok: [mfi-wdc-202-lq.mf.guitarcenter.com] => {
+    "msg": "On system: mfi-wdc-202-lq.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,929 p=122711 u=aniteshl |  ok: [mysqldbdev01.domestic.guitarcenter.com] => {
+    "msg": "On system: mysqldbdev01.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:28,930 p=122711 u=aniteshl |  ok: [ntz-adm-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ntz-adm-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:29,018 p=122711 u=aniteshl |  ok: [ntz-adm-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ntz-adm-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:29,104 p=122711 u=aniteshl |  ok: [ntz-prx-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ntz-prx-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:29,190 p=122711 u=aniteshl |  ok: [ntz-prx-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ntz-prx-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:29,277 p=122711 u=aniteshl |  ok: [oms-app-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-001-ld.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:29,359 p=122711 u=aniteshl |  ok: [oms-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:29,443 p=122711 u=aniteshl |  ok: [oms-app-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-001-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:29,527 p=122711 u=aniteshl |  ok: [oms-app-001-ls.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-001-ls.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:29,609 p=122711 u=aniteshl |  ok: [oms-app-001-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-001-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:29,692 p=122711 u=aniteshl |  ok: [oms-app-002-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-002-ld.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:29,863 p=122711 u=aniteshl |  ok: [oms-app-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-002-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:29,865 p=122711 u=aniteshl |  ok: [oms-app-002-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-002-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:29,962 p=122711 u=aniteshl |  ok: [oms-app-003-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-003-ld.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,048 p=122711 u=aniteshl |  ok: [oms-app-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-003-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,133 p=122711 u=aniteshl |  ok: [oms-app-004-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-004-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,226 p=122711 u=aniteshl |  ok: [oms-app-101-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-101-ld.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,311 p=122711 u=aniteshl |  ok: [oms-app-101-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-101-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,395 p=122711 u=aniteshl |  ok: [oms-app-101-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-101-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,477 p=122711 u=aniteshl |  ok: [oms-app-102-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-app-102-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,562 p=122711 u=aniteshl |  ok: [oms-bld-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-bld-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,643 p=122711 u=aniteshl |  ok: [oms-cfg-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-cfg-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,729 p=122711 u=aniteshl |  ok: [oms-dyn-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-dyn-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,814 p=122711 u=aniteshl |  ok: [oms-int-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:30,898 p=122711 u=aniteshl |  ok: [oms-int-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-001-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:30,991 p=122711 u=aniteshl |  ok: [oms-int-001-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-001-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:31,080 p=122711 u=aniteshl |  ok: [oms-int-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-002-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,165 p=122711 u=aniteshl |  ok: [oms-int-002-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-002-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:31,252 p=122711 u=aniteshl |  ok: [oms-int-101-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-101-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,335 p=122711 u=aniteshl |  ok: [oms-int-101-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-101-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,419 p=122711 u=aniteshl |  ok: [oms-int-102-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-int-102-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,502 p=122711 u=aniteshl |  ok: [oms-log-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-log-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,584 p=122711 u=aniteshl |  ok: [oms-log-001-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-log-001-lu.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:31,670 p=122711 u=aniteshl |  ok: [oms-web-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:31,757 p=122711 u=aniteshl |  ok: [oms-web-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-001-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:31,845 p=122711 u=aniteshl |  ok: [oms-web-001-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-001-lu.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:31,929 p=122711 u=aniteshl |  ok: [oms-web-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-002-lp.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:32,023 p=122711 u=aniteshl |  ok: [oms-web-002-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-002-lu.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'jdk-1.6.0_45-fcs.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:32,109 p=122711 u=aniteshl |  ok: [oms-web-101-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-101-lq.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:32,191 p=122711 u=aniteshl |  ok: [oms-web-101-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-101-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:32,325 p=122711 u=aniteshl |  ok: [oms-web-102-lu.domestic.guitarcenter.com] => {
+    "msg": "On system: oms-web-102-lu.domestic.guitarcenter.com, java is installed: [u'jdk-1.6.0_45-fcs.x86_64']."
+}
+2019-03-12 15:41:32,326 p=122711 u=aniteshl |  ok: [opx-app-001-ld.mf.guitarcenter.com] => {
+    "msg": "On system: opx-app-001-ld.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:32,416 p=122711 u=aniteshl |  ok: [opx-app-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: opx-app-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:32,795 p=122711 u=aniteshl |  ok: [ora-oem-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-oem-001-lp.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:33,169 p=122711 u=aniteshl |  ok: [ora-rac-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk1.8.0_121-1.8.0_121-fcs.x86_64']."
+}
+2019-03-12 15:41:33,579 p=122711 u=aniteshl |  ok: [ora-rac-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-002-lp.domestic.guitarcenter.com, java is installed: [u'jdk1.8.0_121-1.8.0_121-fcs.x86_64']."
+}
+2019-03-12 15:41:33,992 p=122711 u=aniteshl |  ok: [ora-rac-101-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-101-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.i686', u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:34,190 p=122711 u=aniteshl |  ok: [ora-rac-102-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-102-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-1.el7_6.i686', u'copy-jdk-configs-3.3-10.el7_5.noarch']."
+}
+2019-03-12 15:41:34,378 p=122711 u=aniteshl |  ok: [ora-rac-103-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-103-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:34,790 p=122711 u=aniteshl |  ok: [ora-rac-104-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-104-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:35,203 p=122711 u=aniteshl |  ok: [ora-rac-105-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-105-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:35,534 p=122711 u=aniteshl |  ok: [ora-rac-106-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-106-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:35,861 p=122711 u=aniteshl |  ok: [ora-rac-301-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-301-lp.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:36,206 p=122711 u=aniteshl |  ok: [ora-rac-302-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-302-lp.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:36,547 p=122711 u=aniteshl |  ok: [ora-rac-501-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-501-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.201.b09-1.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.201.b09-1.el6_10.x86_64']."
+}
+2019-03-12 15:41:37,562 p=122711 u=aniteshl |  ok: [ora-rac-502-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: ora-rac-502-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.201.b09-1.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.201.b09-1.el6_10.x86_64']."
+}
+2019-03-12 15:41:37,563 p=122711 u=aniteshl |  ok: [ora-rac-901-lp.mf.guitarcenter.com] => {
+    "msg": "On system: ora-rac-901-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:37,696 p=122711 u=aniteshl |  ok: [ora-rac-902-lp.mf.guitarcenter.com] => {
+    "msg": "On system: ora-rac-902-lp.mf.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:37,697 p=122711 u=aniteshl |  ok: [pam-app-007-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: pam-app-007-ld.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:37,777 p=122711 u=aniteshl |  ok: [pam-ftp-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: pam-ftp-001-lp.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-10.el7_5.noarch', u'java-1.8.0-openjdk-headless-1.8.0.201.b09-0.el7_6.x86_64']."
+}
+2019-03-12 15:41:37,855 p=122711 u=aniteshl |  ok: [phxweb0001.guitarcenter.com] => {
+    "msg": "On system: phxweb0001.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:37,936 p=122711 u=aniteshl |  ok: [phxweb0002.guitarcenter.com] => {
+    "msg": "On system: phxweb0002.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:38,018 p=122711 u=aniteshl |  ok: [phxweb0004.domestic.guitarcenter.com] => {
+    "msg": "On system: phxweb0004.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64']."
+}
+2019-03-12 15:41:38,096 p=122711 u=aniteshl |  ok: [phxweb0005.domestic.guitarcenter.com] => {
+    "msg": "On system: phxweb0005.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64']."
+}
+2019-03-12 15:41:38,174 p=122711 u=aniteshl |  ok: [phxweb1001.guitarcenter.com] => {
+    "msg": "On system: phxweb1001.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:38,256 p=122711 u=aniteshl |  ok: [phxweb1002.guitarcenter.com] => {
+    "msg": "On system: phxweb1002.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:38,425 p=122711 u=aniteshl |  ok: [phxweb1009.domestic.guitarcenter.com] => {
+    "msg": "On system: phxweb1009.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64']."
+}
+2019-03-12 15:41:38,426 p=122711 u=aniteshl |  ok: [phxweb1010.domestic.guitarcenter.com] => {
+    "msg": "On system: phxweb1010.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64']."
+}
+2019-03-12 15:41:38,507 p=122711 u=aniteshl |  ok: [prc-wap-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: prc-wap-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk1.8.0_77-1.8.0_77-fcs.x86_64']."
+}
+2019-03-12 15:41:38,587 p=122711 u=aniteshl |  ok: [rbk-web-001-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: rbk-web-001-ld.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-devel-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'jdk-1.7.0_65-fcs.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:38,667 p=122711 u=aniteshl |  ok: [rbk-web-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: rbk-web-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'jdk-1.7.0_65-fcs.x86_64']."
+}
+2019-03-12 15:41:38,746 p=122711 u=aniteshl |  ok: [rbk-web-002-ld.domestic.guitarcenter.com] => {
+    "msg": "On system: rbk-web-002-ld.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.8.0-openjdk-devel-1.8.0.191.b12-0.el6_10.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'jdk-1.7.0_65-fcs.x86_64', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:38,825 p=122711 u=aniteshl |  ok: [rbk-web-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: rbk-web-002-lp.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'jdk-1.7.0_65-fcs.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:38,908 p=122711 u=aniteshl |  ok: [sc7-app-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: sc7-app-001-lp.domestic.guitarcenter.com, java is installed: [u'jdk1.8.0_144-1.8.0_144-fcs.x86_64', u'jdk1.8.0_112-1.8.0_112-fcs.x86_64']."
+}
+2019-03-12 15:41:38,988 p=122711 u=aniteshl |  ok: [sc7-app-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: sc7-app-001-lq.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:39,149 p=122711 u=aniteshl |  ok: [sftpproxy.domestic.guitarcenter.com] => {
+    "msg": "On system: sftpproxy.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:39,151 p=122711 u=aniteshl |  ok: [svn-app-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: svn-app-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:39,241 p=122711 u=aniteshl |  ok: [tib-adt-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-adt-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64']."
+}
+2019-03-12 15:41:39,325 p=122711 u=aniteshl |  ok: [tib-adt-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-adt-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch']."
+}
+2019-03-12 15:41:39,416 p=122711 u=aniteshl |  ok: [tib-adt-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-adt-002-lp.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.171-2.6.13.0.el6_9.x86_64']."
+}
+2019-03-12 15:41:39,497 p=122711 u=aniteshl |  ok: [tib-adt-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-adt-002-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch']."
+}
+2019-03-12 15:41:39,579 p=122711 u=aniteshl |  ok: [tib-bev-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bev-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:39,661 p=122711 u=aniteshl |  ok: [tib-bev-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bev-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:39,742 p=122711 u=aniteshl |  ok: [tib-bev-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bev-002-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:39,824 p=122711 u=aniteshl |  ok: [tib-bev-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bev-002-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.201-2.6.16.0.el6_10.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.191.b12-0.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-1.8.0.191.b12-0.el6_10.x86_64']."
+}
+2019-03-12 15:41:39,905 p=122711 u=aniteshl |  ok: [tib-bld-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bld-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:39,987 p=122711 u=aniteshl |  ok: [tib-bld-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bld-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.7.0-openjdk-1.7.0.161-2.6.12.0.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,068 p=122711 u=aniteshl |  ok: [tib-bwx-001-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-001-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,150 p=122711 u=aniteshl |  ok: [tib-bwx-001-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-001-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch']."
+}
+2019-03-12 15:41:40,319 p=122711 u=aniteshl |  ok: [tib-bwx-002-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-002-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,320 p=122711 u=aniteshl |  ok: [tib-bwx-002-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-002-lq.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:40,413 p=122711 u=aniteshl |  ok: [tib-bwx-003-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-003-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,495 p=122711 u=aniteshl |  ok: [tib-bwx-003-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-003-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:40,577 p=122711 u=aniteshl |  ok: [tib-bwx-004-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-004-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,657 p=122711 u=aniteshl |  ok: [tib-bwx-004-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-004-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:40,742 p=122711 u=aniteshl |  ok: [tib-bwx-005-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-005-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,823 p=122711 u=aniteshl |  ok: [tib-bwx-005-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-005-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:40,904 p=122711 u=aniteshl |  ok: [tib-bwx-006-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-006-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:40,985 p=122711 u=aniteshl |  ok: [tib-bwx-006-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-006-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:41,066 p=122711 u=aniteshl |  ok: [tib-bwx-007-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-007-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:41,150 p=122711 u=aniteshl |  ok: [tib-bwx-007-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-007-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:41,235 p=122711 u=aniteshl |  ok: [tib-bwx-008-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-008-lq.domestic.guitarcenter.com, java is installed: [u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64', u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:41,328 p=122711 u=aniteshl |  ok: [tib-bwx-009-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-bwx-009-lq.domestic.guitarcenter.com, java is installed: [u'java-1.7.0-openjdk-1.7.0.191-2.6.15.4.el6_10.x86_64', u'java-1.8.0-openjdk-1.8.0.181-3.b13.el6_10.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-headless-1.8.0.181-3.b13.el6_10.x86_64']."
+}
+2019-03-12 15:41:41,436 p=122711 u=aniteshl |  ok: [tib-ems-101-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-ems-101-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:41,532 p=122711 u=aniteshl |  ok: [tib-ems-101-lq.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-ems-101-lq.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'copy-jdk-configs-3.3-9.el6.noarch', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:41,612 p=122711 u=aniteshl |  ok: [tib-ems-102-lp.domestic.guitarcenter.com] => {
+    "msg": "On system: tib-ems-102-lp.domestic.guitarcenter.com, java is installed: [u'java-1.8.0-openjdk-headless-1.8.0.161-3.b14.el6_9.x86_64', u'java-1.8.0-openjdk-1.8.0.161-3.b14.el6_9.x86_64']."
+}
+2019-03-12 15:41:41,691 p=122711 u=aniteshl |  ok: [timedb.domestic.guitarcenter.com] => {
+    "msg": "On system: timedb.domestic.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:41,771 p=122711 u=aniteshl |  ok: [vertexdev01.domestic.guitarcenter.com] => {
+    "msg": "On system: vertexdev01.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-javadoc-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:41,850 p=122711 u=aniteshl |  ok: [vertexweb01.domestic.guitarcenter.com] => {
+    "msg": "On system: vertexweb01.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-javadoc-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:41,937 p=122711 u=aniteshl |  ok: [vertexweb02.domestic.guitarcenter.com] => {
+    "msg": "On system: vertexweb02.domestic.guitarcenter.com, java is installed: [u'java-1.6.0-openjdk-devel-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-javadoc-1.6.0.41-1.13.13.1.el6_8.x86_64', u'java-1.6.0-openjdk-1.6.0.41-1.13.13.1.el6_8.x86_64']."
+}
+2019-03-12 15:41:42,023 p=122711 u=aniteshl |  ok: [wbi-psi-001-lp.mf.guitarcenter.com] => {
+    "msg": "On system: wbi-psi-001-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:42,111 p=122711 u=aniteshl |  ok: [wbi-psi-002-lp.mf.guitarcenter.com] => {
+    "msg": "On system: wbi-psi-002-lp.mf.guitarcenter.com, java is installed: []."
+}
+2019-03-12 15:41:42,179 p=122711 u=aniteshl |  ok: [wbi-psi-003-lp.mf.guitarcenter.com] => {
+    "msg": "On system: wbi-psi-003-lp.mf.guitarcenter.com, java is installed: []."
+}

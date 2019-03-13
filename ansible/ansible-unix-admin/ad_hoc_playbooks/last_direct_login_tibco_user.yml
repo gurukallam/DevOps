@@ -1,0 +1,22 @@
+---
+- name: Last direct login of tibco user. 
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Last login of tibco user.
+      shell: "lastlog -u tibco"
+      register: last_log
+      become: true
+
+    - name: Display priviledged users.
+      debug:
+        msg: "On system: {{ ansible_fqdn}}, the last direct login of tibco user is: {{ last_log.stdout_lines }}." 
+...

@@ -27,9 +27,9 @@
     backup: yes
 
 - name: Capture any pre-existing "rhn-org-trusted-ssl-cert".
-  shell: "rpm -qa | grep rhn-org-trusted-ssl-cert"
+  yum:
+    list: grep rhn-org-trusted-ssl-cert
   register: pre_existing
-  ignore_errors: yes
 
 - name: Remove pre-existing "rhn-org-trusted-ssl-cert" if any. 
   yum: 
