@@ -1,0 +1,3 @@
+---
+dependencies:
+   - {role: unregister_satellite,             tags: [ 'unregister_satellite' ] }

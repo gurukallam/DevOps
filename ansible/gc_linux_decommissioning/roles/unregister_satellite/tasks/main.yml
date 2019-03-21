@@ -1,0 +1,10 @@
+---
+- block:
+  - name: Import Sensitive data file.
+    include_vars: "vars/credentials.yml"
+
+  - name: Unregister linux server from redhat satellite
+    redhat_subscription:
+      state: absent
+      username: "{{ adm_user }}" 
+      password: "{{ adm_user_password }}"
