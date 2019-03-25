@@ -14,13 +14,13 @@
     # MUST BE PREPOPULATED. This is the only block that needs to be edited.
     # Check group name and GID beforehand to avoid conflicts.
     # Check if user UID is not already used.
-      group_name: kvishwanadham
-      group_gid: 9183
-      group_name_secondary: jbossadmins,omsadmins,logadmins
-      user_name: kvishwanadham
-      user_uid: 9183
+      group_name: sarora
+      group_gid: 9187
+      group_name_secondary: jbossadmins,omsadmins
+      user_name: sarora
+      user_uid: 9187
       user_shell: /bin/bash
-      comment_about_user: Keerthi Vishwanadham - Application Team
+      comment_about_user: Sumit Arora - OMS Admins
       user_password: Guit@rC3nter2019! 
       #user_password: '$6$4xWLh5b87t9QOTvn$5L99kSqtplBov4ADtBU9d7Gla2jI8zALJ1GrOxUxINdx0KRjzrPnAiZfNcfbf84Zc2ARKM8lyjUDtBQfWbA.B.' 
       user_pub_key: ""
