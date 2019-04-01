@@ -12,7 +12,8 @@
 
   vars:
     user_name_or_names:
-      - anicholson
+      - jgrant
+      - rgore 
 
   tasks:
     - name: Delete "{{ user_name_or_names }}" from the UNIX systems.

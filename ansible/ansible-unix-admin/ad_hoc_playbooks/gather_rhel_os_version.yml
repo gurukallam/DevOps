@@ -1,0 +1,23 @@
+---
+- name: Determine OS version
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Determine OS version on remote hosts.
+      shell: sed 's/[^"]*"\([^"]*\).*/\1/' /etc/system-release
+      register: os_version
+      become: true
+
+    - name: Display OS version.
+      debug:
+        msg: "System {{ ansible_fqdn}} has the following OS version, {{ os_version.stdout_lines }}." 
+
+...

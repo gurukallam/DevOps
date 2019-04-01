@@ -1,6 +1,7 @@
 ---
 - name: Add a new user on Linux/UNIX Systems.
   hosts: "{{ override_hosts | default('GC_SERVERS') }}"
+  user: ansible
   become_user: root
   become_method: sudo
   become: true

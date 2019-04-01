@@ -1,0 +1,40 @@
+---
+- name: Information on all accounts whose password is set to never expire. 
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+ 
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+ 
+  tasks:
+    - name: Gather all non-system accounts
+      command: "for account in $(getent passwd | awk -F: '$3 > 499 {print $1}'); do echo "On $(hostname): ACCOUNT: $account , PASSWORD EXPIRES: `chage -l $account | grep 'Password expires' | awk '{print $4, $5, $6}'`, CHANGED: `chage -l $account | grep 'Last password change' | awk '{print $5, $6, $7}'`"; done | grep -i 'PASSWORD EXPIRES: never'"
+      register: non_sys_accts_info
+      become: true
+
+    - name: Display all non-system accounts
+      debug: var=non_sys_accts_info.stdout_lines
+
+#    - name: Display chage of all non-system accounts
+#      shell: "chage -l {{ item }}"
+#      register: "{{ item }}_chage"
+#      with_items: "{{ non_sys_accts_info.stdout_lines }}"
+#
+#    - debug: 
+#        msg: "{{ item }}_chage.stdout_lines"
+      #with_items: 
+      #  - "{{ non_sys_accts_info.stdout_lines }}"
+     
+      
+
+    #- debug: var="{{ item }}".stdout_lines
+    #  with_items: "{{ non_sys_accts_info.stdout_lines }}"
+
+   # - debug: 
+   #     var: "{{ item }}_chage.stdout"
+   #   with_items: "{{ non_sys_accts_info.stdout_lines }}"
+...

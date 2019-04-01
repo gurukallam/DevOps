@@ -1,0 +1,27 @@
+---
+- name: Disable a user on the Unix/Linux System(s).
+  hosts:  "{{ override_hosts | default('GC_SERVERS') }}"
+  user: svc-ansible
+  become_method: sudo
+  become_user: root
+  become: true
+  gather_facts: true
+
+  environment:
+    PATH: '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+
+  vars:
+    user_name_or_names:
+      - testuser
+
+  tasks:
+    - name: Disable "{{ user_name_or_names }}" from the Unix/Linux System(s).
+      command: usermod -L "{{ item }}"
+      with_items: "{{ user_name_or_names }}"
+      tags: lock_password
+
+    - name: Expire "{{ user_name_or_names }}" accounts from the Unix/Linux System(s).
+      command: chage -E 0 "{{ item }}"
+      with_items: "{{ user_name_or_names }}"
+      tags: force_expire_account
+...

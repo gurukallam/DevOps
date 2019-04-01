@@ -1,4 +1,9 @@
 ---
+- name: Delete "katello.facts" if it exists. 
+  file: 
+    path: /etc/rhsm/facts/katello.facts
+    state: absent
+    
 - name: Copy "rhnplugin.conf" to "/etc/yum/pluginconf.d/rhnplugin.conf".
   copy: 
     src: files/rhnplugin.conf 
